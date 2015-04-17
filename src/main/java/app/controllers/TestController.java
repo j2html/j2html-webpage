@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.utils.Template;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
@@ -7,12 +8,12 @@ import spark.Response;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TestController {
+public class TestController extends Controller {
 
     public static ModelAndView sayHello(Request request, Response response) {
-        Map<String, String> map = new HashMap<>();
-        map.put("name", "Sam");
-        return new ModelAndView(map, "hello.mustache");
+        Map<String, Object> model = new HashMap<>();
+        model.put("name", "Sam");
+        return render(Template.HELLO, model);
     }
 
 }

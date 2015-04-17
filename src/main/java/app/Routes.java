@@ -1,19 +1,23 @@
 package app;
 
 import app.controllers.TestController;
+import app.utils.Path;
 import spark.TemplateViewRoute;
 import spark.template.mustache.MustacheTemplateEngine;
 
 public class Routes {
 
     public static void main(String[] args) {
+        Config.ConfigureApp();
 
-        get("/hello", TestController::sayHello);
+        get(Path.HELLO, TestController::sayHello);
 
     }
 
     private static void get(String path, TemplateViewRoute handler) {
         spark.Spark.get(path, handler, new MustacheTemplateEngine());
     }
+
+
 
 }
