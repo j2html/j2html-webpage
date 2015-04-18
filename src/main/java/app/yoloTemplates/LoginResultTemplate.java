@@ -4,7 +4,6 @@ import app.utils.Message;
 
 import static app.utils.GagawaWrapper.*;
 
-
 public class LoginResultTemplate {
 
     public static String render(String email, String password) {

@@ -4,7 +4,6 @@ import com.hp.gagawa.java.elements.*;
 
 public class GagawaWrapper {
 
-
     public static Html html(){
         return new Html();
     }

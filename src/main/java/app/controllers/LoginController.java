@@ -1,8 +1,6 @@
 package app.controllers;
 
-import app.utils.Message;
-import app.yoloTemplates.LoginResultTemplate;
-import app.yoloTemplates.LoginTestTemplate;
+import app.yoloTemplates.*;
 import spark.Request;
 import spark.Response;
 

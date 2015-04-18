@@ -1,7 +1,6 @@
 package app.yoloTemplates;
 
 import app.utils.Message;
-import app.utils.Path;
 
 import static app.utils.GagawaWrapper.*;
 import static app.yoloTemplates.partials.Partials.*;

@@ -11,10 +11,8 @@ public class Routes {
         Config.ConfigureApp();
 
         get(Path.LOGIN, LoginController::serveLoginForm);
-
         post(Path.LOGIN, LoginController::handleLogin);
+
     }
-
-
 
 }
