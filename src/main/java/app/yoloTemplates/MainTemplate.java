@@ -3,7 +3,9 @@ package app.yoloTemplates;
 import com.hp.gagawa.java.FertileNode;
 import com.hp.gagawa.java.elements.*;
 
-public class MainTemplate extends YoloTemplate {
+import static app.utils.GagawaWrapper.*;
+
+public class MainTemplate {
 
     public static String render(String title, FertileNode... contentNodes){
         Html html = new Html().appendChild(
