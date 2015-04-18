@@ -1,19 +1,16 @@
 package app.controllers;
 
-import app.utils.Template;
-import spark.ModelAndView;
+import app.utils.Message;
+import app.yoloTemplates.FormTestTemplate;
 import spark.Request;
 import spark.Response;
 
-import java.util.HashMap;
-import java.util.Map;
+public class TestController {
 
-public class TestController extends Controller {
+    public static String sayHello(Request request, Response response) {
 
-    public static ModelAndView sayHello(Request request, Response response) {
-        Map<String, Object> model = new HashMap<>();
-        model.put("name", "Sam");
-        return render(Template.HELLO, model);
+        return FormTestTemplate.render(Message.get("FORM_TEST"), Message.get("FORM_TEST"));
+
     }
 
 }
