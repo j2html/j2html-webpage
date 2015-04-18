@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>spark-controller-test</groupId>
-	<artifactId>spark-controller-test</artifactId>
+	<groupId>spark-gagawa</groupId>
+	<artifactId>spark-gagawa</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -27,11 +27,11 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<finalName>spark-controller-test</finalName>
+					<finalName>spark-gagawa</finalName>
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>app.Routes</mainClass>
+							<mainClass>app.Main</mainClass>
 							<classpathPrefix>dependency-jars/</classpathPrefix>
 						</manifest>
 					</archive>
@@ -56,13 +56,13 @@
 						</goals>
 						<phase>package</phase>
 						<configuration>
-							<finalName>spark-controller-test</finalName>
+							<finalName>spark-gagawa</finalName>
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
 							<archive>
 								<manifest>
-									<mainClass>app.Routes</mainClass>
+									<mainClass>app.Main</mainClass>
 								</manifest>
 							</archive>
 						</configuration>

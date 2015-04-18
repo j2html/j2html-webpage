@@ -4,6 +4,8 @@ import com.hp.gagawa.java.elements.*;
 
 public class GagawaWrapper {
 
+    //Extend as needed, the point is to avoid "new Object"-statements in your templates.
+
     public static Html html(){
         return new Html();
     }
@@ -36,24 +38,12 @@ public class GagawaWrapper {
         return new H2();
     }
 
-    public static H3 h3(){
-        return new H3();
-    }
-
-    public static Span span(){
-        return new Span();
-    }
-
     public static Text text(String text){
         return new Text(text);
     }
 
     public static Form form(){
         return new Form("#");
-    }
-
-    public static Input input(){
-        return new Input();
     }
 
 }
