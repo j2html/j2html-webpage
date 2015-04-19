@@ -9,6 +9,7 @@ public class Routes {
 
     public static void setupRoutes() {
 
+        get(Path.LOGIN, LoginController::redirectToDefaultLogin);
         get(Path.queryParams + Path.LOGIN, LoginController::serveLoginForm);
         post(Path.queryParams + Path.LOGIN, LoginController::handleLogin);
 
