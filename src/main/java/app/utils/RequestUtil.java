@@ -3,7 +3,12 @@ package app.utils;
 import spark.Request;
 import java.util.Locale;
 
-public class ParamGetter {
+public class RequestUtil {
+
+    //misc
+    public static MessageGetter messageGetter(Request req) {
+        return new MessageGetter(locale(req));
+    }
 
     //params
     public static String brand(Request req) {

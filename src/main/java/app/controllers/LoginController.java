@@ -5,20 +5,20 @@ import app.views.*;
 import spark.Request;
 import spark.Response;
 
-import static app.utils.ParamGetter.*;
+import static app.utils.RequestUtil.*;
 
 public class LoginController {
 
     public static String serveLoginForm(Request req, Response res) {
         return LoginTestTemplate.render(
-                new MessageGetter(locale(req)),
+                messageGetter(req),
                 brand(req)
         );
     }
 
     public static String handleLogin(Request req, Response res) {
         return LoginResultTemplate.render(
-                new MessageGetter(locale(req)),
+                messageGetter(req),
                 brand(req),
                 email(req),
                 password(req)
