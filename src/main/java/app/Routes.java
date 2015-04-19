@@ -9,8 +9,8 @@ public class Routes {
 
     public static void setupRoutes() {
 
-        get(Path.LOGIN, LoginController::serveLoginForm);
-        post(Path.LOGIN, LoginController::handleLogin);
+        get(Path.queryParams + Path.LOGIN, LoginController::serveLoginForm);
+        post(Path.queryParams + Path.LOGIN, LoginController::handleLogin);
 
     }
 

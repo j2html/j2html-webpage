@@ -1,28 +1,24 @@
-package app.yoloTemplates.partials;
+package app.views.partials;
 
 import app.utils.Message;
 import com.hp.gagawa.java.elements.*;
 
-public class Partials {
+public class Inputs {
 
-    public static Input emailInput() {
+    public static Input emailInput(String placeholder) {
         Input input = new Input();
         input.setType("email");
         input.setName("email");
-        input.setAttribute("placeholder", "Email");
+        input.setAttribute("placeholder", placeholder);
         return input;
     }
 
-    public static Input passwordInput() {
+    public static Input passwordInput(String placeholder) {
         Input input = new Input();
         input.setType("password");
         input.setName("password");
-        input.setAttribute("placeholder", "Password");
+        input.setAttribute("placeholder", placeholder);
         return input;
-    }
-
-    public static Button loginButton() {
-        return submitButton(Message.get("LOGIN_BUTTON"));
     }
 
     public static Button submitButton(String text) {
