@@ -1,7 +1,6 @@
 package app.utils;
 
 import spark.Request;
-
 import java.util.Locale;
 
 public class ParamGetter {

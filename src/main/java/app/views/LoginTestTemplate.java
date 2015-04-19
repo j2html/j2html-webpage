@@ -10,6 +10,7 @@ import static app.views.partials.Inputs.*;
 public class LoginTestTemplate {
 
     public static String render(String brand, Locale locale) {
+        //TODO: better message handling
         return MainTemplate.render(
                 brand,
                 Message.get("FORM_TEST", locale),

@@ -1,6 +1,5 @@
 package app.views.partials;
 
-import app.utils.Message;
 import com.hp.gagawa.java.elements.*;
 
 public class Inputs {
