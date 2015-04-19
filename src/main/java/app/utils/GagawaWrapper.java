@@ -26,10 +26,6 @@ public class GagawaWrapper {
         return new Div();
     }
 
-    public static Link link(){
-        return new Link();
-    }
-
     public static H1 h1(){
         return new H1();
     }

@@ -2,11 +2,17 @@
     box-sizing: border-box;
     font-family: arial;
 }
+
+html {
+    background: url("/images/connect.png");
+}
+
 body {
     position: relative;
-    width: 450px;
+    width: 420px;
     height: 400px;
     margin: 40px auto;
+    border-radius: 5px;
 }
 
 #header {
@@ -16,15 +22,17 @@ body {
     height: 70px;
     width: 100%;
     position: absolute;
-    background: #3d98e7;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    background: #00b2e7;
+    color: white;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2), inset 0 0 70px rgba(0,0,0,0.15)
 }
 
 #main {
     padding: 90px 20px 60px;
     height: 100%;
     background: #FBFBFB;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    background: url("/images/noise.png");
+    box-shadow: 0 5px 40px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,.1);
     border-radius: 5px;
 }
 
@@ -35,8 +43,10 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background: #F7F7F7;
-    box-shadow: 0 -2px 2px rgba(0,0,0,0.3);
+    background: #FFF;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.2), inset 0 0 50px rgba(0,0,0,.05);
 }
 
 input, button {

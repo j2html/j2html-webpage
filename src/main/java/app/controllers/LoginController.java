@@ -1,6 +1,5 @@
 package app.controllers;
 
-import app.utils.MessageGetter;
 import app.views.*;
 import spark.Request;
 import spark.Response;
