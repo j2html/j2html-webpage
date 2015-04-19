@@ -1,5 +1,6 @@
 package app.controllers;
 
+import app.utils.MessageGetter;
 import app.views.*;
 import spark.Request;
 import spark.Response;
@@ -10,15 +11,15 @@ public class LoginController {
 
     public static String serveLoginForm(Request req, Response res) {
         return LoginTestTemplate.render(
-                brand(req),
-                locale(req)
+                new MessageGetter(locale(req)),
+                brand(req)
         );
     }
 
     public static String handleLogin(Request req, Response res) {
         return LoginResultTemplate.render(
+                new MessageGetter(locale(req)),
                 brand(req),
-                locale(req),
                 email(req),
                 password(req)
         );
