@@ -1,17 +1,17 @@
 package app.views.partials;
 
-import com.hp.gagawa.java.elements.Link;
-import com.hp.gagawa.java.elements.Script;
+import j2html.src.tags.Tag;
 
+import static j2html.src.tags.TagCreator.*;
 
 public class StaticResources {
 
-    public static Link mainCSS() {
-        return new Link().setRel("stylesheet").setHref("/css/main.css");
+    public static Tag mainCSS() {
+        return link().withRel("stylesheet").withHref("/css/main.css");
     }
 
-    public static Script jQuery() {
-        return new Script("text/javascript").setSrc("/js/jquery-2.1.3.min.js");
+    public static Tag script_jQuery() {
+        return script().withSrc("/js/jquery-2.1.3.min.js");
     }
 
 }

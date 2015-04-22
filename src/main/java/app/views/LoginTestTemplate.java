@@ -2,7 +2,7 @@ package app.views;
 
 import app.utils.MessageGetter;
 
-import static app.utils.GagawaWrapper.*;
+import static j2html.src.tags.TagCreator.*;
 import static app.views.partials.Inputs.*;
 
 public class LoginTestTemplate {
@@ -11,8 +11,8 @@ public class LoginTestTemplate {
         return MainTemplate.render(
                 brand,
                 msg.get("FORM_TEST"),
-                h1().appendText(msg.get("FORM_TEST")),
-                form().setMethod("post").appendChild(
+                h1().withText(msg.get("FORM_TEST")),
+                form().withMethod("post").with(
                         emailInput(msg.get("PLACEHOLDER_EMAIL")),
                         passwordInput(msg.get("PLACEHOLDER_PASSWORD")),
                         submitButton(msg.get("LOGIN_BUTTON"))
