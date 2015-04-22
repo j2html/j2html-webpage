@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>spark-gagawa</groupId>
-	<artifactId>spark-gagawa</artifactId>
+	<groupId>spark-j2html</groupId>
+	<artifactId>spark-j2html</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -22,7 +22,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<finalName>spark-gagawa</finalName>
+					<finalName>spark-j2html</finalName>
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
@@ -51,7 +51,7 @@
 						</goals>
 						<phase>package</phase>
 						<configuration>
-							<finalName>spark-gagawa</finalName>
+							<finalName>spark-j2html</finalName>
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
