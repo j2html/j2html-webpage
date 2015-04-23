@@ -1,4 +1,4 @@
-package app.views.partials;
+package app.views.atoms;
 
 import j2html.src.tags.Tag;
 

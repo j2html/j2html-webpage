@@ -33,8 +33,8 @@ public class TagTest {
         assertTrue(testTag.renderOpenTag().equals("<a>"));
 
         ContainerTag complexTestTag = new ContainerTag("input");
-        complexTestTag.withType("password").withId("password").withName("password").withPlaceholder("Password").isRequired();
-        String expectedResult = "<input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\" required>";
+        complexTestTag.withType("enterPassword").withId("enterPassword").withName("enterPassword").withPlaceholder("Password").isRequired();
+        String expectedResult = "<input type=\"enterPassword\" id=\"enterPassword\" name=\"enterPassword\" placeholder=\"Password\" required>";
         assertTrue(complexTestTag.renderOpenTag().equals(expectedResult));
     }
 

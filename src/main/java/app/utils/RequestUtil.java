@@ -19,13 +19,21 @@ public class RequestUtil {
         return null != req.params("locale") ? new Locale(req.params("locale")) : new Locale("en");
     }
 
-    //queryParams
+    //query params
     public static String email(Request req) {
         return req.queryParams("email");
     }
 
-    public static String password(Request req) {
-        return req.queryParams("password");
+    public static String enterPassword(Request req) {
+        return req.queryParams("enterPassword");
+    }
+
+    public static String choosePassword(Request req) {
+        return req.queryParams("choosePassword");
+    }
+
+    public static String repeatPassword(Request req) {
+        return req.queryParams("repeatPassword");
     }
 
 }

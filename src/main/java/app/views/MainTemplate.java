@@ -2,8 +2,8 @@ package app.views;
 
 import j2html.src.tags.Tag;
 
-import static app.views.partials.StaticResources.mainCSS;
-import static app.views.partials.StaticResources.script_jQuery;
+import static app.views.atoms.StaticResources.mainCSS;
+import static app.views.atoms.StaticResources.script_jQuery;
 import static j2html.src.tags.TagCreator.*;
 
 public class MainTemplate {

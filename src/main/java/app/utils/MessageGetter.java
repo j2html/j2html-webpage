@@ -12,6 +12,7 @@ public class MessageGetter {
     }
 
     public String get(String message){
+        //always defaults to english if the locale is not recognized
         ResourceBundle messages = ResourceBundle.getBundle("messages/messages", this.locale);
         return messages.getString(message);
     }

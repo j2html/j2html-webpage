@@ -1,4 +1,4 @@
-package app.views.partials;
+package app.views.atoms;
 
 import j2html.src.tags.Tag;
 
@@ -16,11 +16,23 @@ public class Inputs {
                 .isRequired();
     }
 
-    public static Tag passwordInput(String placeholder) {
+    public static Tag enterPasswordInput(String placeholder){
+        return passwordInput("enterPassword", placeholder);
+    }
+
+    public static Tag choosePasswordInput(String placeholder){
+        return passwordInput("choosePassword", placeholder);
+    }
+
+    public static Tag repeatPasswordInput(String placeholder){
+        return passwordInput("repeatPassword", placeholder);
+    }
+
+    public static Tag passwordInput(String identifier, String placeholder) {
         return input()
                 .withType("password")
-                .withId("password")
-                .withName("password")
+                .withId(identifier)
+                .withName(identifier)
                 .withPlaceholder(placeholder)
                 .isRequired();
     }
