@@ -19,7 +19,7 @@ public class RenderSpeed {
                                 h2().withText("Test Form"),
                                 div().with(
                                         input().withType("email").withName("email").withPlaceholder("Email"),
-                                        input().withType("enterPassword").withName("enterPassword").withPlaceholder("enterPassword"),
+                                        input().withType("password").withName("password").withPlaceholder("Password"),
                                         button().withType("submit").withText("Login")
                                 )
                         ),
