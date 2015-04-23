@@ -12,7 +12,7 @@ public abstract class Tag {
 
     protected Tag(String tagType) {
         this.tag = tagType;
-        this.attributes = new ArrayList<Attribute>();
+        this.attributes = new ArrayList<>();
     }
 
     public void setParent(Tag parent) {
@@ -49,11 +49,11 @@ public abstract class Tag {
     }
 
     public String renderOpenTag() {
-        String allAttributes = "";
-        for (Attribute attr : attributes) {
-            allAttributes += attr.render();
+        String tagAttributes = "";
+        for (Attribute attribute : attributes) {
+            tagAttributes += attribute.render();
         }
-        return "<" + tag + allAttributes + ">";
+        return "<" + tag + tagAttributes + ">";
     }
 
     public String renderCloseTag() {
