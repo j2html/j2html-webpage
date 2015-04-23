@@ -12,6 +12,7 @@ public class MainTemplate {
         return document().render() +
                 html().with(
                         head().with(
+                                meta().withCharset("UTF-8"),
                                 title().withText(title),
                                 mainCSS()
                         ),
