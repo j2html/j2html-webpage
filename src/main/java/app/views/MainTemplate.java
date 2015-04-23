@@ -2,12 +2,13 @@ package app.views;
 
 import j2html.src.tags.Tag;
 
+import static app.views.partials.StaticResources.mainCSS;
+import static app.views.partials.StaticResources.script_jQuery;
 import static j2html.src.tags.TagCreator.*;
-import static app.views.partials.StaticResources.*;
 
 public class MainTemplate {
 
-    public static String render(String brand, String title, Tag... contentNodes) {
+    public static String render(String brand, String title, Tag... tags) {
         return document().render() +
                 html().with(
                         head().with(
@@ -20,7 +21,7 @@ public class MainTemplate {
                                 ),
                                 div().withId("main").with(
                                         div().with(
-                                                contentNodes //content from other template
+                                                tags //content from other template
                                         )
                                 ),
                                 div().withId("footer").withText("Footing around"),

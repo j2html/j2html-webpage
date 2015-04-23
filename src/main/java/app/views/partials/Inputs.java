@@ -1,13 +1,14 @@
 package app.views.partials;
 
 
-import j2html.src.tags.Tag;
+import j2html.src.tags.ContainerTag;
+import j2html.src.tags.EmptyTag;
 
 import static j2html.src.tags.TagCreator.*;
 
 public class Inputs {
 
-    public static Tag emailInput(String placeholder) {
+    public static EmptyTag emailInput(String placeholder) {
         return input()
                 .withType("email")
                 .withId("email")
@@ -16,7 +17,7 @@ public class Inputs {
                 .isRequired();
     }
 
-    public static Tag passwordInput(String placeholder) {
+    public static EmptyTag passwordInput(String placeholder) {
         return input()
                 .withType("password")
                 .withId("password")
@@ -25,7 +26,7 @@ public class Inputs {
                 .isRequired();
     }
 
-    public static Tag submitButton(String text) {
+    public static ContainerTag submitButton(String text) {
         return button().withType("submit").withText(text);
     }
 
