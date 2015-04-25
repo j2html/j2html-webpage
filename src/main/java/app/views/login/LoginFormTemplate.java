@@ -13,7 +13,7 @@ public class LoginFormTemplate {
         return MainTemplate.render(
                 brand,
                 msg.get("LOGIN_FORM_TITLE"),
-                h1().withText(msg.get("LOGIN_FORM_TITLE")),
+                h1(msg.get("LOGIN_FORM_TITLE")),
                 form().withMethod("post").with(
                         emailInput(msg.get("PLACEHOLDER_EMAIL")),
                         enterPasswordInput(msg.get("PLACEHOLDER_PASSWORD")),

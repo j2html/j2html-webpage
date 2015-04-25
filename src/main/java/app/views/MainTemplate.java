@@ -13,12 +13,12 @@ public class MainTemplate {
                 html().with(
                         head().with(
                                 meta().withCharset("UTF-8"),
-                                title().withText(title),
+                                title(title),
                                 mainCSS()
                         ),
                         body().with(
                                 div().withId("header").with(
-                                        h1().withText(brand)
+                                        h1(brand)
                                 ),
                                 div().withId("main").with(
                                         div().with(

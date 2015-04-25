@@ -13,7 +13,7 @@ public class SignupFormTemplate {
         return MainTemplate.render(
                 brand,
                 msg.get("SIGNUP_FORM_TITLE"),
-                h1().withText(msg.get("SIGNUP_FORM_TITLE")),
+                h1(msg.get("SIGNUP_FORM_TITLE")),
                 form().withMethod("post").with(
                         emailInput(msg.get("PLACEHOLDER_EMAIL")),
                         choosePasswordInput(msg.get("PLACEHOLDER_CHOOSE_PASSWORD")),

@@ -12,9 +12,9 @@ public class LoginResultTemplate {
         return MainTemplate.render(
                 brand,
                 msg.get("LOGIN_FORM_TITLE"),
-                h1().withText(msg.get("LOGIN_FORM_TITLE")),
-                h2().withText(email),
-                h2().withText(password),
+                h1(msg.get("LOGIN_FORM_TITLE")),
+                h2(email),
+                h2(password),
                 a().withHref(Path.DEFAULT_QUERY_PARAMS+Path.SIGNUP).withText(msg.get("SIGNUP_FORM_TITLE"))
         );
     }

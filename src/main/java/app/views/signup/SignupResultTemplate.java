@@ -11,10 +11,10 @@ public class SignupResultTemplate {
         return MainTemplate.render(
                 brand,
                 msg.get("SIGNUP_FORM_TITLE"),
-                h1().withText(msg.get("SIGNUP_FORM_TITLE")),
-                h2().withText(email),
-                h2().withText(choosePassword),
-                h2().withText(repeatPassword),
+                h1(msg.get("SIGNUP_FORM_TITLE")),
+                h2(email),
+                h2(choosePassword),
+                h2(repeatPassword),
                 a().withHref(Path.DEFAULT_QUERY_PARAMS+Path.LOGIN).withText(msg.get("LOGIN_FORM_TITLE"))
         );
     }
