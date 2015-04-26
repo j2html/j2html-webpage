@@ -8,7 +8,7 @@ import static j2html.src.tags.TagCreator.*;
 
 public class MainTemplate {
 
-    public static String render(String brand, String title, Tag... tags) {
+    public static String render(String title, Tag... tags) {
         return document().render() +
                 html().with(
                         head().with(
@@ -17,15 +17,20 @@ public class MainTemplate {
                                 mainCSS()
                         ),
                         body().with(
-                                div().withId("header").with(
-                                        h1(brand)
+                                header().with(
+                                        nav().with(
+                                                li().with(a("Home").withHref("/")),
+                                                li().with(a("Download").withHref("/download")),
+                                                li().with(a("Examples").withHref("/examples")),
+                                                li().with(a("News").withHref("/news"))
+                                        )
                                 ),
-                                div().withId("main").with(
+                                main().with(
                                         div().with(
                                                 tags //content from other template
                                         )
                                 ),
-                                div().withId("footer").withText("Footing around"),
+                                footer(),
                                 script_jQuery()
                         )
                 ).render();
