@@ -1,7 +1,3 @@
-# spark-j2html
+# j2html-webpage
 
-This strange project combines [SparkJava](http://sparkjava.com/) and [j2html](https://github.com/tipsy/j2html) to enabled rapid web development with typesafe Java templates (uuuh).
-
-It might be a great idea, but it's most likely terrible.
-
-We'll see.
+This project contains the source code for the j2html webpage
