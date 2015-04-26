@@ -8,7 +8,6 @@ public class NewsTemplate {
     public static String render(){
         return MainTemplate.render(
                 "News",
-                "news",
                 h1("News")
         );
     }

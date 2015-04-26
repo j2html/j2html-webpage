@@ -8,7 +8,6 @@ public class DownloadTemplate {
     public static String render(){
         return MainTemplate.render(
                 "Download",
-                "download",
                 h1("Download")
         );
     }

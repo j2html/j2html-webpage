@@ -1,8 +1,9 @@
 html {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
-    color: #f9f9f9;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    background: #93a8c5;
+    color: #2d425a;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.60);
 }
 
 html, body {
@@ -12,11 +13,6 @@ html, body {
 * {
     box-sizing: border-box;
 }
-
-.index    { background: #f4665f; }
-.download { background: #09b7c6; }
-.examples { background: #78b3f4; }
-.news     { background: #5ccda1; }
 
 h1 {
     text-align: center;
@@ -31,10 +27,12 @@ body {
 
 nav a {
     text-decoration: none;
+    text-align: center;
     color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.60);
     display: inline-block;
     width: 25%;
-    padding: 30px 40px;
+    padding: 25px 15px;
     font-size: 25px;
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }

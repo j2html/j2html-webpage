@@ -19,4 +19,12 @@ public class StaticResources {
         return script().withSrc("/js/jquery-2.1.3.min.js");
     }
 
+    public static Tag script_smoothState() {
+        return script().withSrc("/js/jquery.smoothState.js");
+    }
+
+    public static Tag script_main() {
+        return script().withSrc("/js/main.js");
+    }
+
 }
