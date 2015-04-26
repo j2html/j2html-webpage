@@ -2,33 +2,31 @@ package app.views;
 
 import j2html.src.tags.Tag;
 
-import static app.views.atoms.StaticResources.mainCSS;
-import static app.views.atoms.StaticResources.script_jQuery;
+import static app.views.atoms.StaticResources.*;
 import static j2html.src.tags.TagCreator.*;
 
 public class MainTemplate {
 
-    public static String render(String title, Tag... tags) {
+    public static String render(String title, String bodyClass, Tag... tags) {
         return document().render() +
                 html().with(
                         head().with(
                                 meta().withCharset("UTF-8"),
-                                title(title),
-                                mainCSS()
+                                title("j2html - " + title),
+                                css_Main(),
+                                font_Josefin()
                         ),
-                        body().with(
+                        body().withClass(bodyClass).with(
                                 header().with(
                                         nav().with(
-                                                li().with(a("Home").withHref("/")),
-                                                li().with(a("Download").withHref("/download")),
-                                                li().with(a("Examples").withHref("/examples")),
-                                                li().with(a("News").withHref("/news"))
+                                                a("Home").withHref("/"),
+                                                a("Download").withHref("/download"),
+                                                a("Examples").withHref("/examples"),
+                                                a("News").withHref("/news")
                                         )
                                 ),
                                 main().with(
-                                        div().with(
-                                                tags //content from other template
-                                        )
+                                        tags //content from other template
                                 ),
                                 footer(),
                                 script_jQuery()

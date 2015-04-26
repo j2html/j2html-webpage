@@ -25,5 +25,4 @@ public class PageServer {
         return NewsTemplate.render();
     }
 
-
 }

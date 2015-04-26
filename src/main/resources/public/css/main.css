@@ -1,64 +1,40 @@
-* {
-    box-sizing: border-box;
-    font-family: arial;
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 }
 
-html {
-    background: url("/images/connect.png");
+html, body {
+    margin: 0
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.index    { background: #f4665f; }
+.download { background: #09b7c6; }
+.examples { background: #78b3f4; }
+.news     { background: #5ccda1; }
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 body {
-    position: relative;
-    width: 420px;
-    height: 450px;
-    margin: 40px auto;
-    border-radius: 5px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-#header {
-    text-align: center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    height: 70px;
-    width: 100%;
-    position: absolute;
-    background: #00b2e7;
-    color: white;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2), inset 0 0 70px rgba(0,0,0,0.15)
-}
-
-#main {
-    padding: 90px 20px 60px;
-    height: 100%;
-    background: #FBFBFB;
-    background: url("/images/noise.png");
-    box-shadow: 0 5px 40px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,.1);
-    border-radius: 5px;
-}
-
-#footer {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 40px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background: #FFF;
-    text-align: center;
-    line-height: 40px;
-    box-shadow: 0 -1px 4px rgba(0,0,0,0.2), inset 0 0 50px rgba(0,0,0,.05);
-}
-
-input, button {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 8px 12px;
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-button {
-    background: #444;
-    color: white;
+nav a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    width: 25%;
+    padding: 30px 40px;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
 }
