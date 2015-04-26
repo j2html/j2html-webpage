@@ -1,9 +1,7 @@
 html {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    background: #93a8c5;
+    background: url("/img/pattern.png");
     color: #2d425a;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.60);
 }
 
 html, body {
@@ -11,25 +9,30 @@ html, body {
 }
 
 * {
+    font-weight: 400;
     box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     font-size: 35px;
-    font-weight: 400;
 }
 
 body {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 876px;
+    margin: 20px auto 0;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+main {
+    padding: 20px;
 }
 
 nav a {
     text-decoration: none;
     text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.60);
+    color: #2d425a;
     display: inline-block;
     width: 25%;
     padding: 25px 15px;
