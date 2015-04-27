@@ -5,10 +5,12 @@ import app.views.MainTemplate;
 import static j2html.src.tags.TagCreator.*;
 
 public class NewsTemplate {
-    public static String render(){
+    public static String render() {
         return MainTemplate.render(
                 "News",
-                h1("News")
+                section().withId("news").with(
+                        h1("News")
+                )
         );
     }
 }

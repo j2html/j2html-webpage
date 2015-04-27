@@ -1,22 +1,46 @@
 html {
-    font-family: 'Josefin Sans', sans-serif;
     background: url("/img/pattern.png");
-    color: #2d425a;
+    color: #43485a;
+    font-family: arial, sans-serif;
 }
+
+h1, h2, h3, nav a { font-family: "Lato", sans-serif; }
 
 html, body {
     margin: 0
 }
 
 * {
-    font-weight: 400;
+    font-weight: 300;
     box-sizing: border-box;
 }
 
+p {
+    line-height: 24px;
+    text-align: justify;
+}
+
+li {
+    margin: 5px 0;
+}
+
+p, li { font-size: 15px; }
+
 h1 {
+    margin-top: 0;
     text-align: center;
     font-size: 35px;
+    border-bottom: 2px solid #000;
 }
+
+h2 {
+    margin-bottom: 0;
+}
+
+#index h1       { border-color: #f4665f; }
+#download h1    { border-color: #10a8c6; }
+#examples h1    { border-color: #e4b034; }
+#news h1        { border-color: #51cd8c; }
 
 body {
     max-width: 876px;
@@ -27,6 +51,13 @@ body {
 
 main {
     padding: 20px;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
 }
 
 nav a {
