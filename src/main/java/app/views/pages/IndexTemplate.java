@@ -12,7 +12,6 @@ public class IndexTemplate {
                 section().withId("index").with(
                         h1("A big boy template engine"),
 
-
                         h2("Intended use"),
 
                         p("Please use j2html if:"),
