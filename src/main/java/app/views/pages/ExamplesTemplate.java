@@ -9,14 +9,18 @@ public class ExamplesTemplate {
     public static String render() {
         return MainTemplate.render(
                 "Examples",
+                "examples",
                 section().withId("examples").with(
-                        h1("Reclaim control over your HTML"),
+                        h1("Reclaim control over your HTML").withClass("banner"),
                         h2("Basic example"),
                         p("Creating a basic webpage is very similar to HTML. This Java code:"),
                         basicExampleJava(),
                         p("Becomes this HTML:"),
                         basicExampleHTML(),
-                        h2("Partials and nested views"),
+                        p("It's literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote!"),
+
+
+                        h2("Partials"),
                         p("j2html can do much more than create simple static HTML though. When you use traditional " +
                                 "logic-less (read: dumb) templates, you lose two very important things: type safety and flexibility."),
                         p("While the loss of flexibility is almost understandable due to concerns about " +
@@ -33,9 +37,10 @@ public class ExamplesTemplate {
                         p().with(
                                 text("Imagine if you wanted labels in addition. The Java snippet would look almost identical: You could create a partial called"),
                                 em(" passwordAndLabel() "),
-                                text("and nothing but the method name would change. The result HTML however, would be twice or thrice as big, depending on whether " +
+                                text("and nothing but the method name would change. The resulting HTML however, would be twice or thrice as big, depending on whether " +
                                      "or not you wrapped the input and label in another tag.")
                         ),
+                        h2("Dynamic templates"),
                         p().with(
                           text("Once you've set up partials like this, you can call them from wherever, which greatly reduces potential errors. " +
                                   "But this is not much different from macros in some of the more advanced template languages (except it's type safe). What else can j2html do? " +
@@ -47,7 +52,7 @@ public class ExamplesTemplate {
                                 "In j2html you can specify the context in which a view is rendered, and supply the rendering method with type safe parameters! " +
                                 "If we want to insert our form in a header/footer frame, we simply create a MainTemplate and make it take our view as an argument:"),
                         mainExampleJava(),
-                        p("Which will result in the rendered HTML here:"),
+                        p("Which will result in the rendered HTML:"),
                         mainExampleHTML(),
                         p("We would now get a compilation error if we forgot to include a title, and there is 0 chance of forgetting either header or footer, mistyping paths" +
                                 ", forgetting to close divs, or anything else.")

@@ -8,8 +8,9 @@ public class NewsTemplate {
     public static String render() {
         return MainTemplate.render(
                 "News",
+                "news",
                 section().withId("news").with(
-                        h1("News")
+                        h1("News").withClass("banner")
                 )
         );
     }

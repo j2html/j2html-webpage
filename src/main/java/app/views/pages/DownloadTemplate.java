@@ -8,8 +8,9 @@ public class DownloadTemplate {
     public static String render() {
         return MainTemplate.render(
                 "Download",
+                "download",
                 section().withId("download").with(
-                        h1("Clone j2html on GitHub, or grab the jar"),
+                        h1("Clone j2html on GitHub, or grab the jar").withClass("banner"),
                         p("Something something sorry about no maven yet")
                 )
         );

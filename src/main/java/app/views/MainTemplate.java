@@ -7,7 +7,7 @@ import static j2html.src.tags.TagCreator.*;
 
 public class MainTemplate {
 
-    public static String render(String title, Tag... tags) {
+    public static String render(String title, String activeTab, Tag... tags) {
         return document().render() +
                 html().with(
                         head().with(
@@ -21,10 +21,10 @@ public class MainTemplate {
                         body().with(
                                 header().with(
                                         nav().with(
-                                                a("Home").withHref("/"),
-                                                a("Download").withHref("/download"),
-                                                a("Examples").withHref("/examples"),
-                                                a("News").withHref("/news")
+                                                a("Home").withHref("/").withClass(activeTab.equals("index") ? "active" : ""),
+                                                a("Download").withHref("/download").withClass(activeTab.equals("download") ? "active" : ""),
+                                                a("Examples").withHref("/examples").withClass(activeTab.equals("examples") ? "active" : ""),
+                                                a("News").withHref("/news").withClass(activeTab.equals("news") ? "active" : "")
                                         )
                                 ),
                                 main().withId("smooth-stated").with(

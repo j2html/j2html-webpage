@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         staticFileLocation("/public");
-        port(8080);
+        port(9999);
         setupRoutes();
     }
 

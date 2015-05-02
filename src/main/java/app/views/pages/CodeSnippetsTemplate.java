@@ -150,7 +150,7 @@ public class CodeSnippetsTemplate {
     public static Tag otherTemplatesExample() {
         return codeSnippet("java",
                 "#include(\"/path/to/header\")\n" +
-                        "#setTitle(\"Sing up form\")\n" +
+                        "#setTitle(\"Signup page\")\n" +
                         "<h1>Please sign up</h1>\n" +
                         "<form>\n" +
                         "    ...\n" +
