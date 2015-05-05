@@ -1,12 +1,12 @@
 package app.views.pages;
 
-import app.views.MainTemplate;
+import app.views.MainView;
 
 import static j2html.src.tags.TagCreator.*;
 
-public class DownloadTemplate {
+public class DownloadView {
     public static String render() {
-        return MainTemplate.render(
+        return MainView.render(
                 "Download",
                 "download",
                 section().withId("download").with(

@@ -1,10 +1,10 @@
-package app.views.pages;
+package app.views.atoms;
 
 import j2html.src.tags.Tag;
 
 import static j2html.src.tags.TagCreator.*;
 
-public class CodeSnippetsTemplate {
+public class CodeExamples {
 
     /** this file is actually a really good example of where j2html sucks
      * well, would suck, if it wasn't for intellij's auto-formatting <3
@@ -121,6 +121,66 @@ public class CodeSnippetsTemplate {
                         "    \n" +
                         "<button type=\"submit\">Text</button>"
         );
+    }
+
+    public static Tag forLoopExampleJAVA8() {
+        return codeSnippet("java",
+                "//use stream directly inside builder\n" +
+                        "body.with(\n" +
+                        "    div().withId(\"employees\").with(\n" +
+                        "            employees.stream().map(employee ->\n" +
+                        "                            div().withClass(\"employee\").with(\n" +
+                        "                                    h2(employee.getName()),\n" +
+                        "                                    img().withSrc(employee.getImgPath()),\n" +
+                        "                                    p(employee.getTitle())\n" +
+                        "                            )\n" +
+                        "            ).collect(Collectors.toList())\n" +
+                        "    )\n" +
+                        ")");
+    }
+
+    public static Tag forLoopExampleJAVA() {
+        return codeSnippet("java",
+                "//create function for displaying employees (could also use regular for-loop)\n" +
+                        "List<Tag> createEmployeeList(List<Employee> list) {\n" +
+                        "    return list.stream().map(employee ->\n" +
+                        "                    div().withClass(\"employee\").with(\n" +
+                        "                            h2(employee.getName()),\n" +
+                        "                            img().withSrc(employee.getImgPath()),\n" +
+                        "                            p(employee.getTitle())\n" +
+                        "                    )\n" +
+                        "    ).collect(Collectors.toList());\n" +
+                        "}\n" +
+                        "\n" +
+                        "//call method in your builder\n" +
+                        "body.with(\n" +
+                        "    div().withId(\"employees\").with(\n" +
+                        "            createEmployeeList(employees)\n" +
+                        "    )\n" +
+                        ")");
+    }
+
+    public static Tag forLoopExampleHTML() {
+        return codeSnippet("markup",
+                "<body>\n" +
+                        "    <div id=\"employees\">\n" +
+                        "        <div class=\"employee\">\n" +
+                        "            <h2>David</h2>\n" +
+                        "            <img src=\"/img/david.png\">\n" +
+                        "            <p>Bad framework creator</p>\n" +
+                        "        </div>\n" +
+                        "        <div class=\"employee\">\n" +
+                        "            <h2>Christian</h2>\n" +
+                        "            <img src=\"/img/christian.png\">\n" +
+                        "            <p>Jenkins fanboi</p>\n" +
+                        "        </div>\n" +
+                        "        <div class=\"employee\">\n" +
+                        "            <h2>Paul</h2>\n" +
+                        "            <img src=\"/img/paul.png\">\n" +
+                        "            <p>Hater of Lambda Expressions</p>\n" +
+                        "        </div>\n" +
+                        "    </div>\n" +
+                        "</body>");
     }
 
     public static Tag viewExampleJava() {

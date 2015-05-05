@@ -1,28 +1,28 @@
 package app.controllers;
 
-import app.views.pages.DownloadTemplate;
-import app.views.pages.ExamplesTemplate;
-import app.views.pages.IndexTemplate;
-import app.views.pages.NewsTemplate;
+import app.views.pages.DownloadView;
+import app.views.pages.ExamplesView;
+import app.views.pages.IndexView;
+import app.views.pages.NewsView;
 import spark.Request;
 import spark.Response;
 
 public class PageServer {
 
     public static String serveIndex(Request req, Response res) {
-        return IndexTemplate.render();
+        return IndexView.render();
     }
 
     public static String serveDownload(Request req, Response res) {
-        return DownloadTemplate.render();
+        return DownloadView.render();
     }
 
     public static String serveExamples(Request req, Response res) {
-        return ExamplesTemplate.render();
+        return ExamplesView.render();
     }
 
     public static String serveNews(Request req, Response res) {
-        return NewsTemplate.render();
+        return NewsView.render();
     }
 
 }

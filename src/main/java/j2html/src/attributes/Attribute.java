@@ -19,6 +19,7 @@ public class Attribute {
     public String render() {
         if (name == null) { return ""; }
         if (value == null) { return " "+name; }
+        if (value.equals("")) { return ""; }
         return(" "+name+"=\""+value+"\"");
     }
 

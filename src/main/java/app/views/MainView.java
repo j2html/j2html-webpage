@@ -5,7 +5,7 @@ import j2html.src.tags.Tag;
 import static app.views.atoms.StaticResources.*;
 import static j2html.src.tags.TagCreator.*;
 
-public class MainTemplate {
+public class MainView {
 
     public static String render(String title, String activeTab, Tag... tags) {
         return document().render() +

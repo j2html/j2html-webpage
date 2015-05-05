@@ -1,12 +1,12 @@
 package app.views.pages;
 
-import app.views.MainTemplate;
+import app.views.MainView;
 
 import static j2html.src.tags.TagCreator.*;
 
-public class NewsTemplate {
+public class NewsView {
     public static String render() {
-        return MainTemplate.render(
+        return MainView.render(
                 "News",
                 "news",
                 section().withId("news").with(
