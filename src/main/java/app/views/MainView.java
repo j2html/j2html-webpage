@@ -21,10 +21,10 @@ public class MainView {
                         body().with(
                                 header().with(
                                         nav().with(
-                                                a("Home").withHref("/").withClass(activeTab.equals("index") ? "active" : ""),
-                                                a("Download").withHref("/download").withClass(activeTab.equals("download") ? "active" : ""),
-                                                a("Examples").withHref("/examples").withClass(activeTab.equals("examples") ? "active" : ""),
-                                                a("News").withHref("/news").withClass(activeTab.equals("news") ? "active" : "")
+                                                a("Home").withHref("/").withCondClass(activeTab.equals("index"), "active"),
+                                                a("Download").withHref("/download").withCondClass(activeTab.equals("download"), "active"),
+                                                a("Examples").withHref("/examples").withCondClass(activeTab.equals("examples"), "active"),
+                                                a("News").withHref("/news").withCondClass(activeTab.equals("news"), "active")
                                         )
                                 ),
                                 main().withId("smooth-stated").with(
