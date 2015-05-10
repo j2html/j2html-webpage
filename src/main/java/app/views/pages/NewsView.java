@@ -10,7 +10,9 @@ public class NewsView {
                 "News",
                 "news",
                 section().withId("news").with(
-                        h1("News").withClass("banner")
+                        h1("News").withClass("banner"),
+                        h2("Hello j2html"),
+                        p("Something something")
                 )
         );
     }

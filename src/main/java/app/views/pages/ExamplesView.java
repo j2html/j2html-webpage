@@ -48,7 +48,7 @@ public class ExamplesView {
                         forLoopExampleHTML(),
 
 
-                        h2("Dynamic templates"),
+                        h2("Dynamic views"),
                         p().with(
                                 text("Once you've set up partials, you can call them from wherever, which greatly reduces potential errors. " +
                                         "Let's say we want to include the from the partials-example form in our webpage. We want a header above and a footer below. Most templating languages make you do this: ")
@@ -57,7 +57,7 @@ public class ExamplesView {
                         p("which is a pain to work with. You have no idea what the header and footer expects, and you have no way to affect how they treat your content. " +
                                 "You can easily break the site by forgetting to close divs, or by forgetting to include either the header or the footer in one of your views. " +
                                 "In j2html you can specify the context in which a view is rendered, and supply the rendering method with type safe parameters! " +
-                                "If we want to insert our form in a header/footer frame, we simply create a MainTemplate and make it take our view as an argument:"),
+                                "If we want to insert our form in a header/footer frame, we simply create a MainView and make it take our view as an argument:"),
                         mainExampleJava(),
                         p("Which will result in the rendered HTML:"),
                         mainExampleHTML(),

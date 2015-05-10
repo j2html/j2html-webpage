@@ -11,7 +11,10 @@ public class DownloadView {
                 "download",
                 section().withId("download").with(
                         h1("Clone j2html on GitHub, or grab the jar").withClass("banner"),
-                        p("Something something sorry about no maven yet")
+                        h2("Clone the repo on GitHub"),
+                        p("Something something"),
+                        h2("Download the jar"),
+                        p("Something something")
                 )
         );
     }

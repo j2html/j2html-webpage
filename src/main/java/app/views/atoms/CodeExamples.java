@@ -221,7 +221,7 @@ public class CodeExamples {
 
     public static Tag mainExampleJava() {
         return codeSnippet("java",
-                "public class MainTemplate {\n" +
+                "public class MainView {\n" +
                         "    public static String render(String pageTitle, Tag... tags) {\n" +
                         "        return html().with(\n" +
                         "                head().with(\n" +
@@ -242,7 +242,7 @@ public class CodeExamples {
                         "    }\n" +
                         "}\n" +
                         "\n" +
-                        "MainTemplate.render(\n" +
+                        "MainView.render(\n" +
                         "        \"Signup page\",\n" +
                         "        h1(\"Please sign up\"),\n" +
                         "        form().withMethod(\"post\").with(\n" +
