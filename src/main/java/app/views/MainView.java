@@ -42,6 +42,7 @@ public class MainView {
                                 script_jquery(),
                                 script_prism(),
                                 script_smoothState(),
+                                script_googleTagmanager(),
                                 script_main()
                         )
                 ).render();

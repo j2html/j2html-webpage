@@ -1,5 +1,5 @@
 html {
-    background: url("/img/pattern.png");
+    background: url("/img/pattern.png") fixed;
     color: #43485a;
     font-family: arial, sans-serif;
 }
