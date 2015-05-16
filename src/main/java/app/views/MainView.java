@@ -26,9 +26,12 @@ public class MainView {
                                                 a("Download").withHref("/download").withCondClass(activeTab.equals("download"), "active"),
                                                 a("Examples").withHref("/examples").withCondClass(activeTab.equals("examples"), "active"),
                                                 a("News").withHref("/news").withCondClass(activeTab.equals("news"), "active")
+                                        ),
+                                        a().withHref("/").with(
+                                                img().withSrc("/img/logo.png")
                                         )
                                 ),
-                                main().withId("smooth-stated").with(
+                                main().with(
                                         tags //content from other template
                                 ),
                                 footer().with(
@@ -41,11 +44,8 @@ public class MainView {
                                         text(".")
                                 ),
                                 banner_gitHub(),
-                                script_jquery(),
                                 script_prism(),
-                                script_smoothState(),
-                                script_googleTagmanager(),
-                                script_main()
+                                script_googleTagmanager()
                         )
                 ).render();
     }

@@ -15,6 +15,24 @@ public class CodeExamples {
      * j2html, please use a database to store properly formatted content
      */
 
+    public static Tag minimalExampleJava(){
+        return codeSnippet("java",
+                "body().with(\n" +
+                        "    h1(\"Heading!\").withClass(\"example\"),\n" +
+                        "    img().withSrc(\"img/hello.png\")\n" +
+                        ")"
+        );
+    }
+
+    public static Tag minimalExampleHTML() {
+        return codeSnippet("markup",
+                "<body>\n" +
+                        "    <h1 class=\"example\">Heading!</h1>\n" +
+                        "    <img src=\"img/hello.png\">\n" +
+                        "</body>"
+        );
+    }
+
     public static Tag basicExampleJava(){
         return codeSnippet("java",
                 "html().with(\n" +

@@ -39,10 +39,16 @@ p, li {
     font-size: 15px;
 }
 
+header a img {
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 10px;
+    max-width: 50px;
+}
+
 h1.banner {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    margin: -20px -30px 0 -100px;
-    border-bottom-left-radius: 100px;
+    margin: -20px -30px 0 -90px;
     text-align: center;
     font-size: 35px;
     color: white;
@@ -96,7 +102,7 @@ a.active:nth-child(4) { border-color: #4dcd81; }
 #news h1        { background: #4dcd81; }
 
 @media screen and (max-width: 1024px) {
-    #fork-me { display: none; }
+    #fork-me, header a img { display: none; }
     h1.banner {
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         margin: -20px 0 0;
