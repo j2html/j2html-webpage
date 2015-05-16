@@ -14,6 +14,7 @@ public class MainView {
                                 meta().withCharset("UTF-8"),
                                 meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
                                 title("j2html - " + title),
+                                favicon(),
                                 css_main(),
                                 css_prism(),
                                 font_lato()
@@ -39,6 +40,7 @@ public class MainView {
                                         a("Github").withHref("https://github.com/j2html/j2html-webpage"),
                                         text(".")
                                 ),
+                                banner_gitHub(),
                                 script_jquery(),
                                 script_prism(),
                                 script_smoothState(),

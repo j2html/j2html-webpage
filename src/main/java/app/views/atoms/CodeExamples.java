@@ -49,15 +49,15 @@ public class CodeExamples {
 
     public static Tag partialExampleJava() {
         return codeSnippet("java",
-                "public static Tag enterPasswordInput(String placeholder){\n" +
+                "public static Tag enterPasswordInput(String placeholder) {\n" +
                         "    return passwordInput(\"enterPassword\", placeholder);\n" +
                         "}\n" +
                         "\n" +
-                        "public static Tag choosePasswordInput(String placeholder){\n" +
+                        "public static Tag choosePasswordInput(String placeholder) {\n" +
                         "    return passwordInput(\"choosePassword\", placeholder);\n" +
                         "}\n" +
                         "\n" +
-                        "public static Tag repeatPasswordInput(String placeholder){\n" +
+                        "public static Tag repeatPasswordInput(String placeholder) {\n" +
                         "    return passwordInput(\"repeatPassword\", placeholder);\n" +
                         "}\n" +
                         "\n" +
