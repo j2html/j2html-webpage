@@ -185,12 +185,12 @@ public class CodeExamples {
                         "        <div class=\"employee\">\n" +
                         "            <h2>David</h2>\n" +
                         "            <img src=\"/img/david.png\">\n" +
-                        "            <p>Bad framework creator</p>\n" +
+                        "            <p>Creator of Bad Libraries</p>\n" +
                         "        </div>\n" +
                         "        <div class=\"employee\">\n" +
                         "            <h2>Christian</h2>\n" +
                         "            <img src=\"/img/christian.png\">\n" +
-                        "            <p>Jenkins fanboi</p>\n" +
+                        "            <p>Fanboi of Jenkins</p>\n" +
                         "        </div>\n" +
                         "        <div class=\"employee\">\n" +
                         "            <h2>Paul</h2>\n" +
@@ -250,7 +250,7 @@ public class CodeExamples {
                         "                       ...\n" +
                         "                    ),\n" +
                         "                    main().with(\n" +
-                        "                        tags //content from our form\n" +
+                        "                        tags //the view from the partials example\n" +
                         "                    ),\n" +
                         "                    footer().with(\n" +
                         "                        ...\n" +

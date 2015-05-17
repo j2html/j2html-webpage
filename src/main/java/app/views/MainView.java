@@ -15,9 +15,10 @@ public class MainView {
                                 meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
                                 title("j2html - " + title),
                                 favicon(),
-                                css_main(),
+//                                css_main(),
                                 css_prism(),
-                                font_lato()
+                                font_lato(),
+                                style().with(css_main_inline())
                         ),
                         body().with(
                                 header().with(

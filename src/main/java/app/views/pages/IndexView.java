@@ -21,7 +21,8 @@ public class IndexView {
                         minimalExampleHTML(),
                         p().with(
                                 text("Check out some more "),
-                                a("examples").withHref("/examples")
+                                a("examples").withHref("/examples"),
+                                text(".")
                         ),
                         h2("Intended use"),
                         h3("Consider using j2html if:"),
