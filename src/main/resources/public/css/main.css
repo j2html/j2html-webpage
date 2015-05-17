@@ -140,4 +140,13 @@ a.active:nth-child(4) { border-color: #4dcd81; }
     nav a {
         font-size: 12px;
     }
+    h1.banner {
+        font-size: 18px;
+    }
+    body {
+        margin: 0;
+    }
+    code {
+        font-size: 12px;
+    }
 }
