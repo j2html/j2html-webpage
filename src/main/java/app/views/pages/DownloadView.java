@@ -13,9 +13,9 @@ public class DownloadView {
                         h1("Clone j2html on GitHub").withClass("banner"),
                         h2("Clone the repo on GitHub"),
                         p().with(
-                                text("Please clone the repo on "),
+                                text("Please clone and/or fork the repo on "),
                                 a("GitHub").withHref("https://github.com/tipsy/j2html").withTarget("_blank"),
-                                text(", make changes, and create pull requests!")
+                                text(", make changes, and create pull requests! We will go through pull requests every sunday, so don't be shy.")
                         ),
                         h2("What, no Maven?"),
                         p("We really wanted to put it on Maven Central, but it was just so much work... Maybe later!")

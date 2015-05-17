@@ -107,6 +107,12 @@ a.active:nth-child(4) { border-color: #4dcd81; }
 #news h1        { background: #4dcd81; }
 #not-found h1   { background: #333;    }
 
+@media screen and (max-width: 1920px) {
+    html {
+        background-size: 35%;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #fork-me, header a img { display: none; }
     h1.banner {
