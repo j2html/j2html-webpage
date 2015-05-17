@@ -1,9 +1,6 @@
 package app.controllers;
 
-import app.views.pages.DownloadView;
-import app.views.pages.ExamplesView;
-import app.views.pages.IndexView;
-import app.views.pages.NewsView;
+import app.views.pages.*;
 import spark.Request;
 import spark.Response;
 
@@ -25,4 +22,7 @@ public class PageServer {
         return NewsView.render();
     }
 
+    public static String serve404(Request request, Response response) {
+        return PageNotFoundView.render();
+    }
 }

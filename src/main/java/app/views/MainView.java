@@ -21,12 +21,13 @@ public class MainView {
                                 style().with(css_main_inline())
                         ),
                         body().with(
+                                tag("gtm").with(script_googleTagmanager()),
                                 header().with(
                                         nav().with(
                                                 a("Home").withHref("/").withCondClass(activeTab.equals("index"), "active"),
-                                                a("Download").withHref("/download").withCondClass(activeTab.equals("download"), "active"),
-                                                a("Examples").withHref("/examples").withCondClass(activeTab.equals("examples"), "active"),
-                                                a("News").withHref("/news").withCondClass(activeTab.equals("news"), "active")
+                                                a("Download").withHref("/download.html").withCondClass(activeTab.equals("download"), "active"),
+                                                a("Examples").withHref("/examples.html").withCondClass(activeTab.equals("examples"), "active"),
+                                                a("News").withHref("/news.html").withCondClass(activeTab.equals("news"), "active")
                                         ),
                                         a().withHref("/").with(
                                                 img().withSrc("/img/logo.png")
@@ -45,8 +46,7 @@ public class MainView {
                                         text(".")
                                 ),
                                 banner_gitHub(),
-                                script_prism(),
-                                script_googleTagmanager()
+                                script_prism()
                         )
                 ).render();
     }

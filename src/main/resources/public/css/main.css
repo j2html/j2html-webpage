@@ -62,7 +62,7 @@ h2 {
 
 body {
     max-width: 876px;
-    margin: 20px auto 0;
+    margin: 20px auto;
     background: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
@@ -91,6 +91,11 @@ nav a {
     font-size: 25px;
 }
 
+.error-code {
+    color: #acaebb;
+    margin-bottom: 0;
+}
+
 a.active:nth-child(1) { border-color: #f45a52; }
 a.active:nth-child(2) { border-color: #10a8c6; }
 a.active:nth-child(3) { border-color: #e4599d; }
@@ -100,6 +105,7 @@ a.active:nth-child(4) { border-color: #4dcd81; }
 #download h1    { background: #10a8c6; }
 #examples h1    { background: #e4599d; }
 #news h1        { background: #4dcd81; }
+#not-found h1   { background: #333;    }
 
 @media screen and (max-width: 1024px) {
     #fork-me, header a img { display: none; }

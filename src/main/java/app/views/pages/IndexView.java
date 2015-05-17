@@ -21,7 +21,7 @@ public class IndexView {
                         minimalExampleHTML(),
                         p().with(
                                 text("Check out some more "),
-                                a("examples").withHref("/examples"),
+                                a("examples").withHref("/examples.html"),
                                 text(".")
                         ),
                         h2("Intended use"),
@@ -30,7 +30,7 @@ public class IndexView {
                                 li("You love type safety. You love catching errors at compile time in stead of waiting for some poor users to notice that something is wrong"),
                                 li("You like to dynamically re-use your view-code"),
                                 li().with(
-                                        text("You think template engines are too slow. This index page was rendered 100 000 times in 600ms on an i5-4670. That's about 1000 times faster than Apache \""),
+                                        text("You think template engines are too slow. This index page was rendered 100 000 times in less than half a second on an i5-4670. That's about 1000 times faster than Apache \""),
                                         a("Velocity").withHref("http://velocity.apache.org/").withTarget("_blank"),
                                         text("\" (hah!)")
                                 )
