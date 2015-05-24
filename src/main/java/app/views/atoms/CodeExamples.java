@@ -147,11 +147,11 @@ public class CodeExamples {
                         "body.with(\n" +
                         "    div().withId(\"employees\").with(\n" +
                         "            employees.stream().map(employee ->\n" +
-                        "                            div().withClass(\"employee\").with(\n" +
-                        "                                    h2(employee.getName()),\n" +
-                        "                                    img().withSrc(employee.getImgPath()),\n" +
-                        "                                    p(employee.getTitle())\n" +
-                        "                            )\n" +
+                        "                    div().withClass(\"employee\").with(\n" +
+                        "                            h2(employee.getName()),\n" +
+                        "                            img().withSrc(employee.getImgPath()),\n" +
+                        "                            p(employee.getTitle())\n" +
+                        "                    )\n" +
                         "            ).collect(Collectors.toList())\n" +
                         "    )\n" +
                         ")");
@@ -162,11 +162,11 @@ public class CodeExamples {
                 "//create function for displaying employees (could also use regular for-loop)\n" +
                         "List<Tag> createEmployeeList(List<Employee> list) {\n" +
                         "    return list.stream().map(employee ->\n" +
-                        "                    div().withClass(\"employee\").with(\n" +
-                        "                            h2(employee.getName()),\n" +
-                        "                            img().withSrc(employee.getImgPath()),\n" +
-                        "                            p(employee.getTitle())\n" +
-                        "                    )\n" +
+                        "            div().withClass(\"employee\").with(\n" +
+                        "                    h2(employee.getName()),\n" +
+                        "                    img().withSrc(employee.getImgPath()),\n" +
+                        "                    p(employee.getTitle())\n" +
+                        "            )\n" +
                         "    ).collect(Collectors.toList());\n" +
                         "}\n" +
                         "\n" +
@@ -300,7 +300,7 @@ public class CodeExamples {
         );
     }
 
-    public static Tag codeSnippet(String language, String snippet){
+    public static Tag codeSnippet(String language, String snippet) {
         return pre().with(
                 code().withClass("language-"+language).withText(
                     snippet
