@@ -13,8 +13,8 @@ public class NewsView {
                         h1("News").withClass("banner"),
                         h2("We're on Maven! (Late May 2015)"),
                         p().with(
-                                text("We've finished the herculean task of releasing a plugin on Maven Central. Thanks to Nicholas Smith for his great "),
-                                a("tutorial").withHref("http://nicholaspaulsmith.com/maven-sonatype-release/"),
+                                text("We've finished the herculean task of releasing on Maven Central. Thanks to Nicholas Smith for his great "),
+                                a("tutorial").withHref("http://nicholaspaulsmith.com/maven-sonatype-release/").withTarget("_blank"),
                                 text(".")
                         ),
                         h2("Hello j2html! (Mid May 2015)"),
