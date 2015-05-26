@@ -13,6 +13,7 @@ public class MainView {
                         head().with(
                                 meta().withCharset("UTF-8"),
                                 meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
+                                meta().withName("description").withContent("j2html - Fast and fluent Java 8 HTML5 builder. Type-safe HTML generation for everyone!"),
                                 title("j2html - " + title),
                                 favicon(),
 //                                css_main(),
@@ -30,7 +31,7 @@ public class MainView {
                                                 a("News").withHref("/news.html").withCondClass(activeTab.equals("news"), "active")
                                         ),
                                         a().withHref("/").with(
-                                                img().withSrc("/img/logo.png")
+                                                img().withSrc("/img/logo.png").withAlt("j2html logo")
                                         )
                                 ),
                                 main().with(

@@ -8,16 +8,22 @@ import static j2html.TagCreator.*;
 public class ExamplesView {
     public static String render() {
         return MainView.render(
-                "Examples",
+                "Examples of how to use j2html",
                 "examples",
                 section().withId("examples").with(
                         h1("Reclaim control over your HTML").withClass("banner"),
                         h2("Basic example"),
-                        p("Creating a basic webpage is very similar to HTML. This Java code:"),
+                        p("Creating a basic webpage in j2html is pretty similar to HTML. This Java code:"),
                         basicExampleJava(),
                         p("Becomes this HTML:"),
                         basicExampleHTML(),
-                        p("It's literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote!"),
+                        p().with(
+                                text("It's literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote! " +
+                                "Remember to include the Java wrapping code though, j2html is not a template language, all files are .java. " +
+                                "To see how the wrapping code could look, check out the "),
+                                a("getting started example").withHref("/"),
+                                text(".")
+                        ),
 
 
                         h2("Partials"),

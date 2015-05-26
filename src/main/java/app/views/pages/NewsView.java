@@ -7,11 +7,11 @@ import static j2html.TagCreator.*;
 public class NewsView {
     public static String render() {
         return MainView.render(
-                "News",
+                "News about j2html",
                 "news",
                 section().withId("news").with(
-                        h1("News").withClass("banner"),
-                        h2("We're on Maven! (Late May 2015)"),
+                        h1("The latest news").withClass("banner"),
+                        h2("j2html is on Maven! (Late May 2015)"),
                         p().with(
                                 text("We've finished the herculean task of releasing on Maven Central. Thanks to Nicholas Smith for his great "),
                                 a("tutorial").withHref("http://nicholaspaulsmith.com/maven-sonatype-release/").withTarget("_blank"),

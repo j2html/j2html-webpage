@@ -99,12 +99,12 @@ nav a {
 a.active:nth-child(1) { border-color: #f45a52; }
 a.active:nth-child(2) { border-color: #10a8c6; }
 a.active:nth-child(3) { border-color: #e4599d; }
-a.active:nth-child(4) { border-color: #4dcd81; }
+a.active:nth-child(4) { border-color: #54C781; }
 
 #index h1       { background: #f45a52; }
 #download h1    { background: #10a8c6; }
 #examples h1    { background: #e4599d; }
-#news h1        { background: #4dcd81; }
+#news h1        { background: #54C781; }
 #not-found h1   { background: #333;    }
 
 @media screen and (max-width: 1920px) {

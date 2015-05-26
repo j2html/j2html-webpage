@@ -8,12 +8,12 @@ import static j2html.TagCreator.*;
 public class DownloadView {
     public static String render() {
         return MainView.render(
-                "Download",
+                "Download j2html",
                 "download",
                 section().withId("download").with(
                         h1("Maven and GitHub").withClass("banner"),
                         h2("Maven dependency"),
-                        p("Add the following dependency to your POM:"),
+                        p("Add the j2html dependency to your POM:"),
                         codeSnippet("markup",
                                 "<dependency>\n" +
                                 "    <groupId>com.j2html</groupId>\n" +

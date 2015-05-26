@@ -9,12 +9,12 @@ import static j2html.TagCreator.*;
 public class IndexView {
     public static String render() {
         return MainView.render(
-                "Fast and fluent Java HTML builder",
+                "Fast and fluent Java 8 HTML5 builder",
                 "index",
                 section().withId("index").with(
                         h1("Fast and fluent Java 8 HTML5 builder").withClass("banner"),
 
-                        h2("Getting started"),
+                        h2("Getting started with j2html"),
                         p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),
                         minimalExampleJava(),
                         p("Becomes this HTML:"),
