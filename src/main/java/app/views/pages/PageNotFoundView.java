@@ -2,7 +2,7 @@ package app.views.pages;
 
 import app.views.MainView;
 
-import static j2html.src.tags.TagCreator.*;
+import static j2html.TagCreator.*;
 
 public class PageNotFoundView {
     public static String render() {

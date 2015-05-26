@@ -4,7 +4,7 @@ import app.views.MainView;
 
 import static app.views.atoms.CodeExamples.minimalExampleJava;
 import static app.views.atoms.CodeExamples.minimalExampleHTML;
-import static j2html.src.tags.TagCreator.*;
+import static j2html.TagCreator.*;
 
 public class IndexView {
     public static String render() {

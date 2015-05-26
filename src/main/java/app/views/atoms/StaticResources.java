@@ -1,10 +1,10 @@
 package app.views.atoms;
 
-import j2html.src.tags.Tag;
+import j2html.tags.Tag;
 
-import static j2html.src.tags.TagCreator.link;
-import static j2html.src.tags.TagCreator.script;
-import static j2html.src.tags.TagCreator.unsafeHtml;
+import static j2html.TagCreator.link;
+import static j2html.TagCreator.script;
+import static j2html.TagCreator.unsafeHtml;
 
 public class StaticResources {
 

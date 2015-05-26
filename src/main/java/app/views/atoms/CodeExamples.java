@@ -1,8 +1,9 @@
 package app.views.atoms;
 
-import j2html.src.tags.Tag;
 
-import static j2html.src.tags.TagCreator.*;
+import j2html.tags.Tag;
+
+import static j2html.TagCreator.*;
 
 public class CodeExamples {
 

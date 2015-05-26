@@ -1,9 +1,9 @@
 package app.views;
 
-import j2html.src.tags.Tag;
+import j2html.tags.Tag;
 
 import static app.views.atoms.StaticResources.*;
-import static j2html.src.tags.TagCreator.*;
+import static j2html.TagCreator.*;
 
 public class MainView {
 

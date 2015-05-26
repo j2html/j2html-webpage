@@ -3,7 +3,7 @@ package app.views.pages;
 import app.views.MainView;
 
 import static app.views.atoms.CodeExamples.*;
-import static j2html.src.tags.TagCreator.*;
+import static j2html.TagCreator.*;
 
 public class ExamplesView {
     public static String render() {
