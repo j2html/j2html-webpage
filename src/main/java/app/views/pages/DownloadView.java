@@ -11,7 +11,7 @@ public class DownloadView {
                 "Download",
                 "download",
                 section().withId("download").with(
-                        h1("Add the Maven dependency or clone from GitHub").withClass("banner"),
+                        h1("Maven and GitHub").withClass("banner"),
                         h2("Maven dependency"),
                         p("Add the following dependency to your POM:"),
                         codeSnippet("markup",
