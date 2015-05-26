@@ -18,10 +18,16 @@ public class CodeExamples {
 
     public static Tag minimalExampleJava(){
         return codeSnippet("java",
-                "body().with(\n" +
-                        "    h1(\"Heading!\").withClass(\"example\"),\n" +
-                        "    img().withSrc(\"img/hello.png\")\n" +
-                        ")"
+                "import static j2html.TagCreator.*;\n" +
+                        "\n" +
+                        "public class Main {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        body().with(\n" +
+                        "                h1(\"Heading!\").withClass(\"example\"),\n" +
+                        "                img().withSrc(\"img/hello.png\")\n" +
+                        "        ).render();\n" +
+                        "    }\n" +
+                        "}"
         );
     }
 

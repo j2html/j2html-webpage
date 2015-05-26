@@ -14,8 +14,8 @@ public class IndexView {
                 section().withId("index").with(
                         h1("Fast and fluent Java 8 HTML builder").withClass("banner"),
 
-                        h2("Minimal example"),
-                        p("Syntax is fluent and closely matched to HTML. This Java code:"),
+                        h2("Getting started"),
+                        p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),
                         minimalExampleJava(),
                         p("Becomes this HTML:"),
                         minimalExampleHTML(),
