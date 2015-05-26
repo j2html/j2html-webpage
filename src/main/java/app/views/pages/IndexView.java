@@ -12,7 +12,7 @@ public class IndexView {
                 "Fast and fluent Java HTML builder",
                 "index",
                 section().withId("index").with(
-                        h1("Fast and fluent Java 8 HTML builder").withClass("banner"),
+                        h1("Fast and fluent Java 8 HTML5 builder").withClass("banner"),
 
                         h2("Getting started"),
                         p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),
