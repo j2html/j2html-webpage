@@ -22,7 +22,7 @@ public class MainView {
                                 style().with(css_main_inline())
                         ),
                         body().with(
-                                tag("gtm").with(script_googleTagmanager()),
+                                div().withId("gtm").with(script_googleTagmanager()),
                                 header().with(
                                         nav().with(
                                                 a("Home").withHref("/").withCondClass(activeTab.equals("index"), "active"),
