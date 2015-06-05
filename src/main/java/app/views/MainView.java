@@ -13,8 +13,8 @@ public class MainView {
                         head().with(
                                 meta().withCharset("UTF-8"),
                                 meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
-                                meta().withName("description").withContent("j2html - Fast and fluent Java 8 HTML5 builder. Type-safe HTML generation for everyone!"),
-                                title("j2html - " + title),
+                                meta().withName("description").withContent("j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"),
+                                title(title + " - Java HTML builder"),
                                 favicon(),
 //                                css_main(),
                                 css_prism(),
@@ -44,7 +44,9 @@ public class MainView {
                                         a("Spark").withHref("http://sparkjava.com/").withTarget("_blank"),
                                         text(". Webpage source on "),
                                         a("Github").withHref("https://github.com/j2html/j2html-webpage").withTarget("_blank"),
-                                        text(".")
+                                        text("."),
+                                        br(),
+                                        p().withClass("lols").withText("A static page generator or a template engine would be better suited than a HTML builder for creating this page, but we had to do it.")
                                 ),
                                 banner_gitHub(),
                                 script_prism()

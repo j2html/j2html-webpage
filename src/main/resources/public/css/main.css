@@ -75,7 +75,6 @@ footer {
     border-top: 1px solid #ddd;
     text-align: center;
     padding: 10px;
-    font-size: 12px;
 }
 
 nav a {
@@ -94,6 +93,13 @@ nav a {
 .error-code {
     color: #acaebb;
     margin-bottom: 0;
+}
+
+.lols {
+    text-align: center;
+    font-size: 9px;
+    margin: 0;
+    color: #777;
 }
 
 a.active:nth-child(1) { border-color: #f45a52; }
