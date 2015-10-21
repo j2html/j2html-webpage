@@ -1,22 +1,21 @@
 package app.views.pages;
 
-import app.views.MainView;
-
-import static app.views.atoms.CodeExamples.*;
+import app.views.*;
 import static j2html.TagCreator.*;
 
 public class IndexView {
     public static String render() {
         return MainView.render(
-                "Fast and fluent Java 8 HTML5 builder",
+                "Fast and fluent Java HTML5 builder",
                 "index",
                 section().withId("index").with(
-                        h1("Fast and fluent Java 8 HTML5 builder").withClass("banner"),
+                        h1("Fast and fluent Java HTML5 builder").withClass("banner"),
                         h2("Getting started with j2html"),
                         p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),
-                        minimalExampleJava(),
+                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/minimal.java"))),
                         p("Becomes this HTML:"),
-                        minimalExampleHTML(),
+                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/minimal.html"))),
+
                         p().with(
                                 text("Check out some more "),
                                 a("examples").withHref("/examples.html"),
@@ -39,7 +38,7 @@ public class IndexView {
                                 li("You don't know Java and HTML well"),
                                 li("You're creating a classic \"website\" that has a lot of static HTML (if it's all generated then it's fine)"),
                                 li("Your application has a lot of text and you don't use language files / a database (it could work, but string-concatenation would get very annoying)"),
-                                li("You use a CSS framework such as Bootstrap. We tried to use it for this site, it was a nightmare. We might add bootstrap support later, which could reduce Bootstrap boilerplate significantly")
+                                li("You use a CSS framework such as Bootstrap. We tried to use it for this site, it was a nightmare.")
                         ),
                         h2("Why did you make this library?"),
                         p().with(

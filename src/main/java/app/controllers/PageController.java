@@ -4,9 +4,9 @@ import app.views.pages.*;
 import spark.Request;
 import spark.Response;
 
-public class PageServer {
+public class PageController {
 
-    public static String serveIndex(Request req, Response res) {
+    public static String serveIndex(Request request, Response response) {
         return IndexView.render();
     }
 

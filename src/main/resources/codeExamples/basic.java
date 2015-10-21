@@ -1,0 +1,11 @@
+html().with(
+    head().with(
+        title("Title"),
+        link().withRel("stylesheet").withHref("/css/main.css")
+    ),
+    body().with(
+        main().with(
+            h1("Heading!")
+        )
+    )
+)

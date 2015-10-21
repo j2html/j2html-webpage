@@ -16,10 +16,9 @@ public class MainView {
                                 meta().withName("description").withContent("j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"),
                                 title(title + " - Java HTML builder"),
                                 favicon(),
-//                                css_main(),
-                                css_prism(),
                                 font_lato(),
-                                style().with(css_main_inline())
+                                inlineCssMin("/public/css/prism.css"),
+                                inlineCssMin("/public/css/main.css")
                         ),
                         body().with(
                                 script_googleTagmanager(),
@@ -49,7 +48,7 @@ public class MainView {
                                         p().withClass("lols").withText("A static page generator or a template engine would be better suited than a HTML builder for creating this page, but we had to do it.")
                                 ),
                                 banner_gitHub(),
-                                script_prism()
+                                inlineJsMin("/public/js/prism.js")
                         )
                 ).render();
     }
