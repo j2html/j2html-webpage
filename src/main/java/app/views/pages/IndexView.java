@@ -1,6 +1,7 @@
 package app.views.pages;
 
 import app.views.*;
+import static app.views.Partials.codeSnippet;
 import static j2html.TagCreator.*;
 
 public class IndexView {
@@ -12,9 +13,9 @@ public class IndexView {
                         h1("Fast and fluent Java HTML5 builder").withClass("banner"),
                         h2("Getting started with j2html"),
                         p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/minimal.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/minimal.java")),
                         p("Becomes this HTML:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/minimal.html"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/minimal.html")),
 
                         p().with(
                                 text("Check out some more "),

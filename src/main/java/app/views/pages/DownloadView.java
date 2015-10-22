@@ -1,6 +1,7 @@
 package app.views.pages;
 
 import app.views.*;
+import static app.views.Partials.codeSnippet;
 import static j2html.TagCreator.*;
 
 public class DownloadView {
@@ -12,7 +13,7 @@ public class DownloadView {
                         h1("Maven and GitHub").withClass("banner"),
                         h2("Maven dependency"),
                         p("To experience the joy of generating HTML with a Java HTML builder, add the j2html dependency to your POM:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/mavenDep.xml"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/mavenDep.xml")),
                         h2("Clone the repo on GitHub"),
                         p().with(
                                 text("Please clone and/or fork the repo on "),

@@ -1,6 +1,7 @@
 package app.views.pages;
 
 import app.views.*;
+import static app.views.Partials.codeSnippet;
 import static j2html.TagCreator.*;
 
 public class ExamplesView {
@@ -14,9 +15,9 @@ public class ExamplesView {
 
                         h2().withId("basic-example").withText("Basic example"),
                         p("Creating a basic webpage in j2html is pretty similar to HTML. This Java code:"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/basic.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/basic.java")),
                         p("Becomes this HTML:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/basic.html"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/basic.html")),
                         p().with(
                                 text("It's literally impossible to forget to close a div, mistype an attribute name, or forget an attribute quote! " +
                                 "Remember to include the Java wrapping code though, j2html is not a template language, all files are .java. " +
@@ -28,13 +29,13 @@ public class ExamplesView {
 
                         h2().withId("partials").withText("Partials"),
                         p("You can create partials for elements you use a lot:"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/partial.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/partial.java")),
                         p("The equivalent HTML would be:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/partial.html"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/partial.html")),
                         p("You can then use these partials, for example in a registration form:"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/view.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/view.java")),
                         p("Pretty clean, right? The rendered HTML is more verbose:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/view.html"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/view.html")),
                         p().with(
                                 text("Imagine if you wanted labels in addition. The Java snippet would look almost identical: You could create a partial called"),
                                 em(" passwordAndLabel() "),
@@ -45,13 +46,13 @@ public class ExamplesView {
 
                         h2().withId("loops").withText("Loops"),
                         p("Thanks to Java 8's lambda syntax, you can use loops (streams) inside your HTML-builder:"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/forLoopLambda.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/forLoopLambda.java")),
                         p("You can also extract a method. This would allow you to use regular for-loop syntax (although the example uses streams because they're much cooler):"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/forLoop.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/forLoop.java")),
                         p("Since this is pure Java, all the Employee methods (getName, getImgPath, getTitle) are available to you, " +
                                 "and you get autocomplete suggestions and compile time errors."),
                         p("Given three random employees, both the above approaches would give the same HTML:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/forLoop.html"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/forLoop.html")),
 
 
                         h2().withId("dynamic-views").withText("Dynamic views"),
@@ -60,14 +61,14 @@ public class ExamplesView {
                             "Let's say we want to include the form from the partials-example in our webpage. " +
                             "We want a header above and a footer below. A lot of templating languages make you do this: "
                         ),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/otherTemplates.vm"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/otherTemplates.vm")),
                         p("This is a pain to work with. You have no idea what the header and footer expects, and you have no way to affect how they treat your content. " +
                                 "You can easily break the site by forgetting to close divs, or by forgetting to include either the header or the footer in one of your views. " +
                                 "In j2html you can specify the context in which a view is rendered, and supply the rendering method with type safe parameters! " +
                                 "If we want to insert our form in a header/footer frame, we simply create a MainView and make it take our view as an argument:"),
-                        pre().with(code().withClass("language-java").with(fileAsEscapedString("/codeExamples/main.java"))),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/main.java")),
                         p("Which will result in the rendered HTML:"),
-                        pre().with(code().withClass("language-markup").with(fileAsEscapedString("/codeExamples/main.html"))),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/main.html")),
                         p("We would now get a compilation error if we forgot to include a title, and there is 0 chance of forgetting either header or footer, mistyping paths" +
                                 ", forgetting to close divs, or anything else.")
 

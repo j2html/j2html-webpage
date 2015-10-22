@@ -1,8 +1,6 @@
 package app.views;
 
-import j2html.tags.Tag;
-
-import static app.views.atoms.StaticResources.*;
+import j2html.tags.*;
 import static j2html.TagCreator.*;
 
 public class MainView {
@@ -15,13 +13,14 @@ public class MainView {
                                 meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
                                 meta().withName("description").withContent("j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"),
                                 title(title + " - Java HTML builder"),
-                                favicon(),
-                                font_lato(),
+                                link().withRel("icon").withHref("/img/favicon.png"),
+                                link().withRel("stylesheet").withHref("http://fonts.googleapis.com/css?family=Lato:100,300,400,700"),
                                 inlineCssMin("/public/css/prism.css"),
                                 inlineCssMin("/public/css/main.css")
                         ),
                         body().with(
-                                script_googleTagmanager(),
+                                fileAsString("/html/googleTagManager.html"),
+                                fileAsString("/html/githubBanner.html"),
                                 header().with(
                                         nav().with(
                                                 a("Home").withHref("/").withCondClass(activeTab.equals("index"), "active"),
@@ -47,7 +46,6 @@ public class MainView {
                                         br(),
                                         p().withClass("lols").withText("A static page generator or a template engine would be better suited than a HTML builder for creating this page, but we had to do it.")
                                 ),
-                                banner_gitHub(),
                                 inlineJsMin("/public/js/prism.js")
                         )
                 ).render();
