@@ -15,8 +15,8 @@ public class MainView {
                                 title(title + " - Java HTML builder"),
                                 link().withRel("icon").withHref("/img/favicon.png"),
                                 link().withRel("stylesheet").withHref("http://fonts.googleapis.com/css?family=Lato:100,300,400,700"),
-                                inlineCssMin("/public/css/prism.css"),
-                                inlineCssMin("/public/css/main.css")
+                                styleWithInlineFile_min("/public/css/prism.css"),
+                                styleWithInlineFile_min("/public/css/main.css")
                         ),
                         body().with(
                                 fileAsString("/html/googleTagManager.html"),
@@ -46,7 +46,7 @@ public class MainView {
                                         br(),
                                         p().withClass("lols").withText("A static page generator or a template engine would be better suited than a HTML builder for creating this page, but we had to do it.")
                                 ),
-                                inlineJsMin("/public/js/prism.js")
+                                scriptWithInlineFile_min("/public/js/prism.js")
                         )
                 ).render();
     }

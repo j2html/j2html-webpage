@@ -13,11 +13,12 @@ public class NewsView {
                         h1("The latest news").withClass("banner"),
 
                         h2("j2html 0.7 released!"),
-                        p("We are proud to announce the release of j2html 0.7. Changes:"),
+                        p("We are proud to announce the release of j2html 0.7."),
+                        p("Changes:"),
                         ul().with(
-                                li().with(text("Java 7 support")),
-                                li().with(text("Methods for getting static resources inline and minified")),
-                                li().with(text("Methods for getting a file as escaped/unescape text")),
+                                li().with(text("Java 7 support (previously only worked with Java 8)")),
+                                li().with(text("Methods for getting CSS/JS inline and minified")),
+                                li().with(text("Methods for getting a file as escaped/unescape text (easily include static HTML such as Google Analytics code)")),
                                 li().with(text("Use apache stringutils for escaping"))
                         ),
 
