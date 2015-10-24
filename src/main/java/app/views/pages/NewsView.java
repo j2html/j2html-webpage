@@ -15,7 +15,7 @@ public class NewsView {
                         h2().withId("j2html-0.7-released").withText("j2html 0.7 released!"),
                         p().with(
                                 text("We have sacrificed to the Maven Gods, and j2html 0.7 is available for download on "),
-                                a("Maven Central").withHref("").withTarget("_blank"),
+                                a("Maven Central").withHref("http://search.maven.org/#artifactdetails%7Ccom.j2html%7Cj2html%7C0.7%7Cjar").withTarget("_blank"),
                                 text(".")
                         ),
                         p("Changes:"),
