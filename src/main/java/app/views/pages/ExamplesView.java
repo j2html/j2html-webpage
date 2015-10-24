@@ -27,6 +27,13 @@ public class ExamplesView {
                                 a("getting started example").withHref("/"),
                                 text(".")
                         ),
+                        p().with(
+                                em("New in j2html 0.7:"),
+                                br(),
+                                text("j2html 0.7 introduces a file-api, described fully on the "),
+                                a("news page").withHref("http://localhost:8888/news.html#j2html-0.7-released"),
+                                text(".") // I just love this ...
+                        ),
 
 
                         h2().withId("partials").withText("Partials"),

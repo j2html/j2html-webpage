@@ -39,6 +39,18 @@ p, li {
     font-size: 15px;
 }
 
+dt {
+    font-family: monospace;
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+dd {
+    margin: 0;
+    font-size: 13px;
+}
+
 header a img {
     position: absolute;
     margin-left: -60px;
