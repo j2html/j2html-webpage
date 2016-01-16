@@ -13,7 +13,7 @@
     <script>
         function tryReportEvent(event) {
             try {
-                ga("send", "event", "Social Click", event);
+                ga(ga.getAll()[0].get("name")+".send", "event", "Social Click", event);
             } catch(e){ console.log("Failed to send GA event: " + event)}
         }
     </script>
