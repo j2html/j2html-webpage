@@ -11,7 +11,7 @@ public class ExamplesView {
                 "examples",
                 section().withId("examples").with(
                         h1("Reclaim control over your HTML").withClass("banner"),
-
+                        fileAsString("/html/socialButtons.html"),
 
                         h2().withId("basic-example").withText("Basic example"),
                         p("Creating a basic webpage in j2html is pretty similar to HTML. This Java code:"),

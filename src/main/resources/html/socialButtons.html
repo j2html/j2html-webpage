@@ -1,0 +1,47 @@
+
+
+<div class="social">
+    <span class="socialLong">Like j2html? Let others know:</span>
+    <span class="socialShort">Share:</span>
+    <a onclick="tryReportEvent('Twitter Share')" target="_blank" href="https://twitter.com/intent/tweet?text=j2html - Java Html Generator&amp;url=http://j2html.com/&amp;via=j2html&amp;related=j2html" title="Share on Twitter">Twitter</a>
+    |
+    <a onclick="tryReportEvent('Reddit Share')" target="_blank" href="http://www.reddit.com/r/java/submit?url=http://j2html.com/&title=j2html%20-%20Java%20HTML%20Generator">Reddit</a>
+    |
+    <a onclick="tryReportEvent('Facebook Share')" target="_blank" href="https://facebook.com/sharer.php?u=http://j2html.com/" title="Share on Facebook">Facebook</a>
+    |
+    <a onclick="tryReportEvent('Google+ Share')" target="_blank" href="https://plus.google.com/share?url=http://j2html.com/" title="Share on Google+">Google+</a>
+    <script>
+        function tryReportEvent(event) {
+            try {
+                ga("send", "event", "Social Click", event);
+            } catch(e){ console.log("Failed to send GA event: " + event)}
+        }
+    </script>
+    <style>
+        .social {
+            font-family: "Tahoma", arial, sans-serif;
+            text-align: center;
+            background: #444444;
+            color: #fff;
+            padding: 7px 14px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+        }
+        .social a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 8px;
+        }
+        .social a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+        @media (max-width: 480px) {
+            .socialLong { display: none; }
+            .social a { margin: 0 4px; }
+        }
+        @media (min-width: 481px) {
+            .socialShort { display: none; }
+        }
+    </style>
+</div>

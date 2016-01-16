@@ -11,6 +11,7 @@ public class IndexView {
                 "index",
                 section().withId("index").with(
                         h1("Fast and fluent Java HTML5 builder").withClass("banner"),
+                        fileAsString("/html/socialButtons.html"),
 
                         h2("Getting started with j2html"),
                         p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),

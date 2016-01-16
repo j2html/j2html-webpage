@@ -11,6 +11,7 @@ public class NewsView {
                 "news",
                 section().withId("news").with(
                         h1("The latest news").withClass("banner"),
+                        fileAsString("/html/socialButtons.html"),
 
                         h2().withId("j2html-0.7-released").withText("j2html 0.7 released!"),
                         p().with(
