@@ -1,8 +1,8 @@
 
 
-<div class="social">
-    <span class="socialLong">Like j2html? Let others know:</span>
-    <span class="socialShort">Share:</span>
+<div id="social">
+    <span id="socialLong">Like j2html? Let others know:</span>
+    <span id="socialShort">Share:</span>
     <a onclick="tryReportEvent('Twitter Share')" target="_blank" href="https://twitter.com/intent/tweet?text=j2html - Java Html Generator&amp;url=http://j2html.com/&amp;via=j2html&amp;related=j2html" title="Share on Twitter">Twitter</a>
     |
     <a onclick="tryReportEvent('Reddit Share')" target="_blank" href="http://www.reddit.com/r/java/submit?url=http://j2html.com/&title=j2html%20-%20Java%20HTML%20Generator">Reddit</a>
@@ -16,32 +16,49 @@
                 ga(ga.getAll()[0].get("name")+".send", "event", "Social Click", event);
             } catch(e){ console.log("Failed to send GA event: " + event)}
         }
+        if(Math.random() > .5) {
+            //best practices all around
+            document.getElementById("social").innerHTML = 'Like j2html? Star us on GitHub: ' +
+                '<img class="githubStar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAUCAMAAAD/VkC9AAABvFBMVEX5+fnV1dX7+/tERETv7+/w8PDU1NQzMzP4+Pj39/f19fXz8/Px8fHy8vL8/f309PTt7e2QkJD29veLMzP////Jycl6enr+/fvi4uKLzvRssene3t7Ly8vBwcEzM4vR+/v7+9Gfn5+VlZX0z4szMz75+/2q4vt4ve7r6+vl5eXb29v6+8v74qqIiIjpsWwzP15MM15eM0xKSkpePzP///7z+fyPz/r9+/NqsOPh4eHz9M6Wlpb5zpGFhYVwcHDpt29iYmJXV1dWVlawaTVFOTNdMzM5MzOS0v/L/PrK+vry8/eIy/L49vH+/eb2++SFv+SDu+HY2NjOzs42h8u7u7u5ubnr3LX/36nixqD/0pIzM4zkv4Xhu4PtvXhkZGQ/Pz94UjbY9vrE9Pnf+Ph/xfje9/fx8fag1/bQ6PWr2/P4+PF/w/H18u13uuqJtOVZpd6KxN1YqdTR0dHh9M7398w5jcn54r9eg7q2trZjh7JRdrIzarL33qhFbKX10JtLTJJdg4v2y4jqwYQzM3+piHVpb2/ToWrSoWrhq2kzM2m/hV85M17DjFk/M1EzM1HSnUx/WTldRTmRTDNsMzOXvBWgAAACN0lEQVQ4y62UiVPaUBCHQzQsJEBIIKBCtCBYoKVaPFAQ5G7r1XrbS+193/d933f7D3ffCwkMHRFm+v1mdjfszDe8gTymQ1JMbeCXOiiSYm4EV4zUJbOO1sNPSFQ2ITKNiDGJUXi2LUSF2BSB+RdBYUz67FxOp5edzI6YiM2MA8vUYOmT2bAFNwHZTLdua4QlNgtDkoUqWXxqlm1s+nezEOIQDyY2NhJBDwQtlMvvS6EHZyzr1y0N1NlODA8e0StCbFbEB7BipawA+OjwtHx2rXztrqvH2gCxeboYZO/+A0eHBrRq2GSrHCAOmeQ2QIBOk5UrYfdcEWBp9kMp9PjcK3j37QLZmKiMcPLYwT2u3VrVbTwShxxfpQBB2ueLoUcX5V2uHu/zF31r5Zl+uDGSJAsTkVH29fbhXquGTeTFOOSx0iQgQ7ucXN/6PpNyjfOjq29/QXc/jMk82TS3CaIg4klj2DGLeFJtmg7PFZ/ccY0LU19urv5BW7f2ee2kU72H8IxaNWxIDBJ5lQxqnngJHz9dSv1eSqHtx5vTryvURqn/FcYmhwa0qtvsBE82AxlsAOCxU+Y/l0LPTl39Wrl3/2fo5dYttGmL2j8kfHx48LBXq4bNhokWAovYHwIUotgx0w632zt73uH2juJAatJON7oNcbhHvNWq2zgbSTQHKmdTIRfFp6Zp/i5wVdQFjltQuR3RbSym3kVt/khnW0QUYvML1KHHuJEkX6TT2Xoivu1vS5/0f2/yvy0HY/1Rfn3yAAAAAElFTkSuQmCC">' +
+                '<iframe id="githubStar" class="githubStar" src="https://ghbtns.com/github-btn.html?user=tipsy&repo=j2html&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>';
+        }
     </script>
     <style>
-        .social {
+        #social {
             font-family: "Tahoma", arial, sans-serif;
-            text-align: center;
             background: #444444;
             color: #fff;
-            padding: 7px 14px;
+            padding: 0 14px;
+            height: 30px;
+            line-height: 30px;
             border-radius: 5px;
             margin: 20px 0;
             text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+            position: relative;
         }
-        .social a {
+        .githubStar {
+            position: absolute;
+            top: 5px;
+            margin-left: 10px;
+            z-index: 1;
+        }
+        #githubStar {
+            z-index: 2;
+        }
+        #social a {
             text-decoration: none;
             color: #fff;
             margin: 0 8px;
         }
-        .social a:hover {
+        #social a:hover {
             border-bottom: 1px dashed #fff;
         }
         @media (max-width: 480px) {
-            .socialLong { display: none; }
-            .social a { margin: 0 4px; }
+            #socialLong { display: none; }
+            #social a { margin: 0 4px; }
         }
         @media (min-width: 481px) {
-            .socialShort { display: none; }
+            #socialShort { display: none; }
         }
     </style>
 </div>
