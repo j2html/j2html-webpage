@@ -5,7 +5,7 @@ import static j2html.TagCreator.*;
 
 public class MainView {
 
-    public static String render(String title, String activeTab, Tag... tags) {
+    public static String render(String title, String activeTab, DomContent... tags) {
         return document().render() +
                 html().with(
                         head().with(

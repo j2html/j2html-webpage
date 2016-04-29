@@ -1,5 +1,4 @@
-//use stream directly inside builder
-body.with(
+body().with(
     div().withId("employees").with(
         employees.stream().map(employee ->
             div().withClass("employee").with(

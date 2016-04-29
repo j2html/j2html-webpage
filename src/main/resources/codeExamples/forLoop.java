@@ -1,16 +1,19 @@
-//create function for displaying employees (could also use regular for-loop)
-List<Tag> createEmployeeList(List<Employee> list) {
-return list.stream().map(employee ->
-    div().withClass("employee").with(
-        h2(employee.getName()),
-            img().withSrc(employee.getImgPath()),
-            p(employee.getTitle())
-        )
-    ).collect(Collectors.toList());
+List<DomContent> createEmployeeList(List<Employee> employeeList) {
+    List<DomContent> domContent = new ArrayList<>();
+    for(Employee employee : employeeList) {
+        domContent.add(
+            div().withClass("employee").with(
+                h2(employee.getName()),
+                img().withSrc(employee.getImgPath()),
+                p(employee.getTitle())
+            )
+        );
+    }
+    return domContent;
 }
 
 //call method in your builder
-body.with(
+body().with(
     div().withId("employees").with(
         createEmployeeList(employees)
     )

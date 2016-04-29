@@ -56,15 +56,22 @@ public class ExamplesView {
 
 
                         h2().withId("loops").withText("Loops"),
-                        p("Thanks to Java 8's lambda syntax, you can use loops (streams) inside your HTML-builder:"),
+                        p("Using Java 8's lambda syntax, you can write loops (via streams) inside your HTML-builder:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/forLoopLambda.java")),
-                        p("You can also extract a method. This would allow you to use regular for-loop syntax (although the example uses streams because they're much cooler):"),
+
+                        p("j2html also offers a custom each method, which is slightly more powerful:"),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/each.java")),
+
+                        p("If you need to filter your collection, j2html has a built in filter function too:"),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/filter.java")),
+
+                        p("If Java8 and streams are not your thing, you can always extract a method:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/forLoop.java")),
                         p(
                             "Since this is pure Java, all the Employee methods (getName, getImgPath, getTitle) are available to you, " +
                             "and you get autocomplete suggestions and compile time errors."
                         ),
-                        p("Given three random employees, both the above approaches would give the same HTML:"),
+                        p("Given three random employees, all the above approaches would give the same HTML:"),
                         codeSnippet("markup", fileAsEscapedString("/codeExamples/forLoop.html")),
 
 
