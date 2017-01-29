@@ -46,7 +46,7 @@ public class MainView {
                                         br(),
                                         p().withClass("lols").withText("A static page generator or a template engine would be better suited than a HTML builder for creating this page, but we had to do it.")
                                 ),
-                                scriptWithInlineFile_min("/public/js/prism.js")
+                                scriptWithInlineFile("/public/js/prism.js")
                         )
                 ).render();
     }

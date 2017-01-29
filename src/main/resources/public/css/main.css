@@ -68,6 +68,12 @@ h1.banner {
     padding: 15px;
 }
 
+p code, li code {
+    background: #eee;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
 h2 {
     margin-bottom: -10px;
 }
