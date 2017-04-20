@@ -13,6 +13,20 @@ public class NewsView {
                         h1("The latest news").withClass("banner"),
                         fileAsString("/html/socialButtons.html"),
                         // ---------------------------------------------------------------------------------------------
+                        h2().withId("j2html-0.99-released").withText("j2html 0.99 released! (Apr 2017)"),
+                        p().with(
+                                text("j2html 0.99 is available for download on "),
+                                a("Maven Central").withHref("http://search.maven.org/#artifactdetails%7Ccom.j2html%7Cj2html%7C0.99%7Cjar").withTarget("_blank"),
+                                text(".")
+                        ),
+                        p("Changes:"),
+                        ul().with(
+                                li().with(text("Added generic "), code().withText("iff()"), text("/"), code().withText("iffElse()"), text(" methods for performing if's in method calls")),
+                                li().with(text("Added "), code().withText("withClasses()"), text(" to add multiple classes to element. Works well with "), code().withText("iff()"), text(".")),
+                                li().withText("HTML-escaping is now a lot faster (and a lot faster than StringUtils)"),
+                                li().withText("Static files can now be fetched from anywhere, not just classpath")
+                        ),
+                        // ---------------------------------------------------------------------------------------------
                         h2().withId("j2html-0.88-released").withText("j2html 0.88 released! (Jan 2017)"),
                         p().with(
                                 text("j2html 0.88 is available for download on "),

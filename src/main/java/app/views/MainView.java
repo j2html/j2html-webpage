@@ -15,6 +15,7 @@ public class MainView {
                                 title(title + " - Java HTML builder"),
                                 link().withRel("icon").withHref("/img/favicon.png"),
                                 link().withRel("stylesheet").withHref("https://fonts.googleapis.com/css?family=Lato:100,300,400,700"),
+                                link().withRel("preload").withSrc("/img/pattern.png"),
                                 styleWithInlineFile_min("/public/css/prism.css"),
                                 styleWithInlineFile_min("/public/css/main.css")
                         ),
