@@ -24,10 +24,10 @@ public class MainView {
                                 fileAsString("/html/githubBanner.html"),
                                 header().with(
                                         nav().with(
-                                                a("Home").withHref("/").withCondClass(activeTab.equals("index"), "active"),
-                                                a("Download").withHref("/download.html").withCondClass(activeTab.equals("download"), "active"),
-                                                a("Examples").withHref("/examples.html").withCondClass(activeTab.equals("examples"), "active"),
-                                                a("News").withHref("/news.html").withCondClass(activeTab.equals("news"), "active")
+                                                a("Home").withHref("/").withClass(iff(activeTab.equals("index"), "active")),
+                                                a("Download").withHref("/download.html").withClass(iff(activeTab.equals("download"), "active")),
+                                                a("Examples").withHref("/examples.html").withClass(iff(activeTab.equals("examples"), "active")),
+                                                a("News").withHref("/news.html").withClass(iff(activeTab.equals("news"), "active"))
                                         ),
                                         a().withHref("/").with(
                                                 img().withSrc("/img/logo.png").withAlt("j2html logo")
