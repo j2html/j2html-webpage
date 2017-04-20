@@ -14,7 +14,7 @@ public class MainView {
                                 meta().withName("description").withContent("j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"),
                                 title(title + " - Java HTML builder"),
                                 link().withRel("icon").withHref("/img/favicon.png"),
-                                link().withRel("stylesheet").withHref("http://fonts.googleapis.com/css?family=Lato:100,300,400,700"),
+                                link().withRel("stylesheet").withHref("https://fonts.googleapis.com/css?family=Lato:100,300,400,700"),
                                 styleWithInlineFile_min("/public/css/prism.css"),
                                 styleWithInlineFile_min("/public/css/main.css")
                         ),
