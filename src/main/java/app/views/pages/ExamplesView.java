@@ -10,8 +10,10 @@ public class ExamplesView {
                 "Examples of how to use j2html",
                 "Reclaim control of your HTML",
                 section().withId("examples").with(
-                        h2().withId("basic-example").withText("Basic example"),
-                        p("Creating a basic webpage in j2html is pretty similar to HTML. This Java code:"),
+
+
+                        h2("Basic example").withId("basic-example"),
+                        p("Creating a basic HTML structure in j2html is pretty similar to plain HTML. This Java code:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/basic.java")),
                         p("Becomes this HTML:"),
                         codeSnippet("markup", fileAsEscapedString("/codeExamples/basic.html")),
@@ -24,35 +26,12 @@ public class ExamplesView {
                                 a("getting started example").withHref("/"),
                                 text(".")
                         ),
-                        p().with(
-                                em("New in j2html 0.7:"),
-                                br(),
-                                text("j2html 0.7 introduces a file-api, described fully on the "),
-                                a("news page").withHref("/news.html#j2html-0.7-released"),
-                                text(".") // I just love this ...
-                        ),
 
 
-                        h2().withId("partials").withText("Partials"),
-                        p("You can create partials for elements you use a lot:"),
-                        codeSnippet("java", fileAsEscapedString("/codeExamples/partial.java")),
-                        p("The equivalent HTML would be:"),
-                        codeSnippet("markup", fileAsEscapedString("/codeExamples/partial.html")),
-                        p("You can then use these partials, for example in a registration form:"),
-                        codeSnippet("java", fileAsEscapedString("/codeExamples/view.java")),
-                        p("Pretty clean, right? The rendered HTML is more verbose:"),
-                        codeSnippet("markup", fileAsEscapedString("/codeExamples/view.html")),
-                        p().with(
-                                text("Imagine if you wanted labels in addition. The Java snippet would look almost identical: You could create a partial called"),
-                                em(" passwordAndLabel() "),
-                                text(
-                                    "and nothing but the method name would change. The resulting HTML however, would be twice or thrice as big, " +
-                                    "depending on whether or not you wrapped the input and label in another tag."
-                                )
-                        ),
+                        h2("Core concepts").withId("core-concepts"),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/coreConcepts.java")),
 
-
-                        h2().withId("loops").withText("Loops"),
+                        h2("Loops, each() and filter()").withId("loops"),
                         p("Using Java 8's lambda syntax, you can write loops (via streams) inside your HTML-builder:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/forLoopLambda.java")),
 
@@ -72,7 +51,26 @@ public class ExamplesView {
                         codeSnippet("markup", fileAsEscapedString("/codeExamples/forLoop.html")),
 
 
-                        h2().withId("dynamic-views").withText("Dynamic views"),
+                        h2("Partials").withId("partials"),
+                        p("You can create partials for elements you use a lot:"),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/partial.java")),
+                        p("The equivalent HTML would be:"),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/partial.html")),
+                        p("You can then use these partials, for example in a registration form:"),
+                        codeSnippet("java", fileAsEscapedString("/codeExamples/view.java")),
+                        p("Pretty clean, right? The rendered HTML is more verbose:"),
+                        codeSnippet("markup", fileAsEscapedString("/codeExamples/view.html")),
+                        p().with(
+                                text("Imagine if you wanted labels in addition. The Java snippet would look almost identical: You could create a partial called"),
+                                em(" passwordAndLabel() "),
+                                text(
+                                        "and nothing but the method name would change. The resulting HTML however, would be twice or thrice as big, " +
+                                                "depending on whether or not you wrapped the input and label in another tag."
+                                )
+                        ),
+
+
+                        h2("Dynamic views").withId("dynamic-views"),
                         p(
                             "Once you've set up partials, you can call them from wherever, which greatly reduces potential errors. " +
                             "Let's say we want to include the form from the partials-example in our webpage. " +

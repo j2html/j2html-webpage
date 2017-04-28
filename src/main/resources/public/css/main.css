@@ -2,15 +2,22 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+}
+
 html {
+    position: relative;
+    min-height: 100%;
     font-family: arial, sans-serif;
     overflow-y: scroll;
     background: #f5f5f5;
 }
 
-html,
 body {
-    margin: 0;
+    height: 100%;
+    margin-bottom: 50px;
 }
 
 h1, h2, h3, nav a {
@@ -27,6 +34,10 @@ h1 + p, h2 + p, h3 + p {
 }
 
 pre + p {
+    margin-top: 2em;
+}
+
+#news h2:not(:first-of-type) {
     margin-top: 2em;
 }
 
@@ -66,7 +77,7 @@ dd {
 
 .width-limit {
     padding: 0 20px;
-    max-width: 900px;
+    max-width: 840px;
     margin: 0 auto;
 }
 
@@ -104,7 +115,7 @@ dd {
 
 .top-header ul li a {
     display: inline-block;
-    padding: 50px 5px 10px;
+    padding: 50px 5px 15px;
     font-size: 18px;
 }
 
@@ -135,9 +146,18 @@ li code {
 }
 
 footer {
-    border-top: 1px solid #ddd;
+    font-size: 13px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
     text-align: center;
-    padding: 10px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding: 0 20px;
+    overflow: hidden;
 }
 
 .lols {
@@ -145,4 +165,61 @@ footer {
     font-size: 9px;
     margin: 0;
     color: #777;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #fork-me {
+        display: none;
+    }
+    .top-header {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        display: none;
+    }
+    .top-header nav ul li {
+        margin: 0 5px;
+    }
+    .top-header nav ul li a {
+        font-size: 16px;
+    }
+    #logo {
+        font-size: 0;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #logo {
+        display: none;
+    }
+    .top-header nav ul li {
+        margin: 0 2px;
+    }
+    .top-header nav ul li a {
+        font-size: 14px;
+    }
+}
+
+pre::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+pre::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 5px;
+}
+pre::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+pre::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 5px;
+}
+pre::-webkit-scrollbar-button {
+    width: 8px;
+    height: 8px;
 }
