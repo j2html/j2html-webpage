@@ -8,10 +8,8 @@ public class NewsView {
     public static String render() {
         return MainView.render(
                 "News about j2html",
-                "news",
+                "The latest news",
                 section().withId("news").with(
-                        h1("The latest news").withClass("banner"),
-                        fileAsString("/html/socialButtons.html"),
                         // ---------------------------------------------------------------------------------------------
                         h2().withId("j2html-0.99-released").withText("j2html 0.99 released! (Apr 2017)"),
                         p().with(

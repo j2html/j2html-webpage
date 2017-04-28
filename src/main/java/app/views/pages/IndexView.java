@@ -8,15 +8,12 @@ public class IndexView {
     public static String render() {
         return MainView.render(
                 "Fast and fluent Java HTML5 builder",
-                "index",
+                "Fast and fluent Java HTML5 builder",
                 section().withId("index").with(
-                        h1("Fast and fluent Java HTML5 builder").withClass("banner"),
-                        fileAsString("/html/socialButtons.html"),
-
                         h2("Getting started with j2html"),
-                        p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML. This Java code:"),
+                        p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/minimal.java")),
-                        p("Becomes this HTML:"),
+                        p("The Java code above becomes the HTML below:"),
                         codeSnippet("markup", fileAsEscapedString("/codeExamples/minimal.html")),
                         p().with(
                                 text("Check out some more "),
@@ -46,14 +43,12 @@ public class IndexView {
 
                         h2("Why did you make this library?"),
                         p().with(
-                                text("First: j2html is a Java HTML builder. It's not a template engine, and it doesn't want to compete with template engines."),
-                                br(),
+                                text("First: j2html is a Java HTML builder. It's not a template engine, and it doesn't want to compete with template engines. "),
                                 text(
                                     "We were looking for a good way to create HTML for a complex login solution which had many different forms (with different configurations, " +
                                     "depending on user state and user actions, etc), but very little actual HTML per page. " +
-                                    "The result was j2html."
+                                    "The result was j2html. "
                                 ),
-                                br(),
                                 text(
                                     "We decided to release the Java HTML builder we made, since it seems better " +
                                     "than all the other Java HTML builders we found while researching the subject. Hopefully someone will find it useful!"

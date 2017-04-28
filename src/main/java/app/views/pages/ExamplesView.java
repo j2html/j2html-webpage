@@ -8,11 +8,8 @@ public class ExamplesView {
     public static String render() {
         return MainView.render(
                 "Examples of how to use j2html",
-                "examples",
+                "Reclaim control of your HTML",
                 section().withId("examples").with(
-                        h1("Reclaim control over your HTML").withClass("banner"),
-                        fileAsString("/html/socialButtons.html"),
-
                         h2().withId("basic-example").withText("Basic example"),
                         p("Creating a basic webpage in j2html is pretty similar to HTML. This Java code:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/basic.java")),

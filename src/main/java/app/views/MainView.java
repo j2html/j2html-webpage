@@ -1,11 +1,34 @@
 package app.views;
 
-import j2html.tags.*;
-import static j2html.TagCreator.*;
+import j2html.tags.DomContent;
+
+import static j2html.TagCreator.a;
+import static j2html.TagCreator.body;
+import static j2html.TagCreator.br;
+import static j2html.TagCreator.document;
+import static j2html.TagCreator.fileAsString;
+import static j2html.TagCreator.footer;
+import static j2html.TagCreator.h1;
+import static j2html.TagCreator.head;
+import static j2html.TagCreator.header;
+import static j2html.TagCreator.html;
+import static j2html.TagCreator.img;
+import static j2html.TagCreator.li;
+import static j2html.TagCreator.link;
+import static j2html.TagCreator.main;
+import static j2html.TagCreator.meta;
+import static j2html.TagCreator.nav;
+import static j2html.TagCreator.p;
+import static j2html.TagCreator.scriptWithInlineFile;
+import static j2html.TagCreator.span;
+import static j2html.TagCreator.styleWithInlineFile_min;
+import static j2html.TagCreator.text;
+import static j2html.TagCreator.title;
+import static j2html.TagCreator.ul;
 
 public class MainView {
 
-    public static String render(String title, String activeTab, DomContent... tags) {
+    public static String render(String title, String heading, DomContent... tags) {
         return document().render() +
                 html().with(
                         head().with(
@@ -22,18 +45,25 @@ public class MainView {
                         body().with(
                                 fileAsString("/html/googleTagManager.html"),
                                 fileAsString("/html/githubBanner.html"),
-                                header().with(
-                                        nav().with(
-                                                a("Home").withHref("/").withClass(iff(activeTab.equals("index"), "active")),
-                                                a("Download").withHref("/download.html").withClass(iff(activeTab.equals("download"), "active")),
-                                                a("Examples").withHref("/examples.html").withClass(iff(activeTab.equals("examples"), "active")),
-                                                a("News").withHref("/news.html").withClass(iff(activeTab.equals("news"), "active"))
-                                        ),
-                                        a().withHref("/").with(
-                                                img().withSrc("/img/logo.png").withAlt("j2html logo")
+                                header().withClass("top-header").with(
+                                        nav().withClass("width-limit").with(
+                                                a().withId("logo").withHref("/").with(
+                                                        span().with(img().withSrc("/img/logo_teal.png").withAlt("j2html logo"), text("j2html"))
+                                                ),
+                                                ul().with(
+                                                        li().with(a("Home").withHref("/")),
+                                                        li().with(a("Download").withHref("/download.html")),
+                                                        li().with(a("Examples").withHref("/examples.html")),
+                                                        li().with(a("News").withHref("/news.html"))
+                                                )
                                         )
+
                                 ),
-                                main().with(
+                                header().withClass("sub-header").withClass("banner").with(
+                                        h1(heading).withClass("width-limit")
+                                ),
+                                //fileAsString("/html/socialButtons.html"),
+                                main().withClass("width-limit").with(
                                         tags //content from other template
                                 ),
                                 footer().with(

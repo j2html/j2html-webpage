@@ -6,7 +6,7 @@ import spark.Response;
 
 public class PageController {
 
-    public static String serveIndex(Request request, Response response) {
+    public static String serveIndex(Request req, Response res) {
         return IndexView.render();
     }
 
@@ -22,7 +22,7 @@ public class PageController {
         return NewsView.render();
     }
 
-    public static String serve404(Request request, Response response) {
+    public static String serve404(Request req, Response res) {
         return PageNotFoundView.render();
     }
 }
