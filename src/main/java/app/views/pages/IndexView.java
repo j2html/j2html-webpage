@@ -11,7 +11,7 @@ public class IndexView {
                 "Fast and fluent Java HTML5 builder",
                 section().withId("index").with(
                         h2("Getting started with j2html"),
-                        p("Import TagCreator and create some HTML-tags. j2html's syntax is fluent and closely matched to HTML:"),
+                        p("Import TagCreator to get started. j2html's syntax is fluent and closely matched to HTML:"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/minimal.java")),
                         p("The Java code above becomes the HTML below:"),
                         codeSnippet("markup", fileAsEscapedString("/codeExamples/minimal.html")),

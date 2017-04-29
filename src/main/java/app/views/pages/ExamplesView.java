@@ -27,6 +27,7 @@ public class ExamplesView {
                                 text(".")
                         ),
 
+                        fileAsString("/html/socialButtons.html"),
 
                         h2("Core concepts").withId("core-concepts"),
                         codeSnippet("java", fileAsEscapedString("/codeExamples/coreConcepts.java")),

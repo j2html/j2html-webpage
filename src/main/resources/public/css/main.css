@@ -81,6 +81,18 @@ dd {
     margin: 0 auto;
 }
 
+.top-header nav {
+    position: relative;
+}
+
+#github-stars {
+    position: absolute;
+    right: 27px;
+    top: 10px;
+    width: 100px;
+    height: 30px;
+}
+
 .top-header nav,
 .top-header ul {
     height: 90px;

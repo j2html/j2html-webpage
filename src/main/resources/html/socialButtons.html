@@ -1,49 +1,28 @@
 
 
 <div id="social">
-    <span id="socialLong">Like j2html? Let others know:</span>
     <span id="socialShort">Share:</span>
-    <a onclick="tryReportEvent('Twitter Share')" target="_blank" href="https://twitter.com/intent/tweet?text=j2html - Fast and fluent Java HTML5 Builder&amp;url=http://j2html.com/&amp;via=j2html&amp;related=j2html" title="Share on Twitter">Twitter</a>
+    <a onclick="tryReportEvent('Twitter Share')" target="_blank" href="https://twitter.com/intent/tweet?text=j2html - Fast and fluent Java HTML5 Builder&amp;url=https://j2html.com/&amp;via=j2html&amp;related=j2html" title="Share on Twitter">Twitter</a>
     |
-    <a onclick="tryReportEvent('Reddit Share')" target="_blank" href="http://www.reddit.com/r/java/submit?url=http://j2html.com/&title=j2html%20-%20Fast%20and%20Fluent%20Java%20HTML5%20Builder">Reddit</a>
+    <a onclick="tryReportEvent('Reddit Share')" target="_blank" href="http://www.reddit.com/r/java/submit?url=https://j2html.com/&title=j2html%20-%20Fast%20and%20Fluent%20Java%20HTML5%20Builder">Reddit</a>
     |
-    <a onclick="tryReportEvent('Facebook Share')" target="_blank" href="https://facebook.com/sharer.php?u=http://j2html.com/" title="Share on Facebook">Facebook</a>
-    |
-    <a onclick="tryReportEvent('Google+ Share')" target="_blank" href="https://plus.google.com/share?url=http://j2html.com/" title="Share on Google+">Google+</a>
+    <a onclick="tryReportEvent('Facebook Share')" target="_blank" href="https://facebook.com/sharer.php?u=https://j2html.com/" title="Share on Facebook">Facebook</a>
     <script>
         function tryReportEvent(event) {
             try {
                 ga(ga.getAll()[0].get("name")+".send", "event", "Social Click", event);
             } catch(e){ console.log("Failed to send GA event: " + event)}
         }
-        if(Math.random() > .5) {
-            //best practices all around
-            document.getElementById("social").innerHTML = 'Like j2html? Star us on GitHub: ' +
-                '<img class="githubStar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAAUCAMAAADGMfHmAAABa1BMVEX6+vrV1dXu7u5ERET7+/vU1NT29vbw8PD09PUzMzP4+Pj5+fnz8/Px8fHy8vL8/f21tbXj4+P///+LzvTe3t6cnJz0zorLy8ufn59jY2MzMz6LMzP//frr6+tqsOXAwMCWlpaVlZWQkJCIiIj3+/319/rc9/j9/PPg4ODa2to3icqFhYV6enpwcHBXV1dWVlaxaTVFOTNdMzM5MzN/xPX4+PHt7e1xtuv+/eb2++TY2NjQ0ND29s7y883CwsK7u7u5ublghra0tLT/36nSoWk5M1FLS0tKSko/Pz/S///y+vyL0PrE9Pmh2PfQ6PWr2/P59PH18u2Hye3l5eWJtOVZpd6KxN1YqdT8/tLh88754r/r2LdRdrMzarPq37L33qjfxaVFbKX10JvlxptMTJL2z41dg4vqwYQzM399fX3nt3WpiHVsb2/hq2kzM2m/hV85M17DjFnSnUx/WTl4WDldRTmRTDN5TDNsMzNgA7IlAAABy0lEQVQ4y7WVZ1PbQBCGTzGWbhVhJKFgywXbuIGNCzahJbQQSnrvhd575+ezt5gPMGCdP/C8M7er08wz2pHmxHym0hSmjzAV/90Eu3zMtHhbi3zU7hek7ObsbrjTxRTe0hRcEU7FYPfBg0y57gfGE4nxAeYJOf3sfvxMecwoiTlA5hLYN4ycUxcpQp0iXjWMjFMXpCCVnHHdmeQmJHXi6cu+8GRWX/6q30TKqSIOwIRKTAA41MxX+6eqg88jneothPOJ5e0MCRPxDCBEzWqtP20PVQDy4on/ZjtgZ/odOUnp4eQqT4GLK6UMSarDlfDk+8zPyGB0aeXVVLW9A77ZOXFHEUoPJ0cKUOJ1ZiFFNZNbOJn+jLPz9J/tU0DnG1XliJTT4AbO3oMVI2bHKpIeqvz7hc6tg+//L9DZfrUvM7uB9MBsaUw0YyW0G4LdvQ+jZ/nRSKdxtPF2vSacBiHzjgKC3mIBClgAoDdADO/3hReznw5r+d/H4bXzH+gMEDLfUmsA86UcCmI1AcoWVgxvs+3oR1yjGdvG9bWdo305pyZiuRBv1eLgWnjVMDJOrU58RNNG4poXUs7Yo6aISZx1phNrSul4n8kP8e+4BKH0Q718MtVgAAAAAElFTkSuQmCC">' +
-                '<iframe id="githubStar" class="githubStar" src="https://ghbtns.com/github-btn.html?user=tipsy&repo=j2html&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>';
-        }
     </script>
     <style>
         #social {
+            margin: 30px 0;
             font-family: "Tahoma", arial, sans-serif;
-            background: #444444;
+            background: #1eb1cc;
+            border-left: 5px solid #05829d;
             color: #fff;
-            padding: 0 14px;
-            height: 30px;
-            line-height: 30px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-            position: relative;
-        }
-        .githubStar {
-            position: absolute;
-            top: 5px;
-            margin-left: 10px;
-            z-index: 1;
-        }
-        #githubStar {
-            z-index: 2;
+            padding: 10px 20px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
         }
         #social a {
             text-decoration: none;
@@ -54,11 +33,9 @@
             border-bottom: 1px dashed #fff;
         }
         @media (max-width: 480px) {
-            #socialLong { display: none; }
-            #social a { margin: 0 4px; }
-        }
-        @media (min-width: 481px) {
-            #socialShort { display: none; }
+            #social {
+                display: none;
+            }
         }
     </style>
 </div>

@@ -11,7 +11,7 @@ public class NewsView {
                 "The latest news",
                 section().withId("news").with(
                         // ---------------------------------------------------------------------------------------------
-                        h2().withId("j2html-0.99-released").withText("j2html 0.99 released! (Apr 2017)"),
+                        h2("j2html 0.99 released! (Apr 2017)").withId("j2html-0.99-released"),
                         p().with(
                                 text("j2html 0.99 is available for download on "),
                                 a("Maven Central").withHref("http://search.maven.org/#artifactdetails%7Ccom.j2html%7Cj2html%7C0.99%7Cjar").withTarget("_blank"),
@@ -25,7 +25,7 @@ public class NewsView {
                                 li().withText("Static files can now be fetched from anywhere, not just classpath")
                         ),
                         // ---------------------------------------------------------------------------------------------
-                        h2().withId("j2html-0.88-released").withText("j2html 0.88 released! (Jan 2017)"),
+                        h2("j2html 0.88 released! (Jan 2017)").withId("j2html-0.88-released"),
                         p().with(
                                 text("j2html 0.88 is available for download on "),
                                 a("Maven Central").withHref("http://search.maven.org/#artifactdetails%7Ccom.j2html%7Cj2html%7C0.88%7Cjar").withTarget("_blank"),
@@ -34,11 +34,11 @@ public class NewsView {
                         p("Changes:"),
                         ul().with(
                                 li().withText("Closure and StringUtils dependencies removed in favor of custom implementations. Most users seem interested in a very lightweight library."),
-                                li().with(code().withText("unsafeHtml"), text(" is now "), code().withText("rawHtml")),
+                                li().with(code().withText("unsafeHtml()"), text(" is now "), code().withText("rawHtml()")),
                                 li().with(text("Added "), code().withText(".equals()"), text(" to Tag-class. Two Tags are equal if they render the same HTML"))
                         ),
                         // ---------------------------------------------------------------------------------------------
-                        h2().withId("j2html-0.7-released").withText("j2html 0.7 released!"),
+                        h2("j2html 0.7 released!").withId("j2html-0.7-released"),
                         p().with(
                                 text("We have sacrificed to the Maven Gods, and j2html 0.7 is available for download on "),
                                 a("Maven Central").withHref("http://search.maven.org/#artifactdetails%7Ccom.j2html%7Cj2html%7C0.7%7Cjar").withTarget("_blank"),
@@ -71,15 +71,8 @@ public class NewsView {
                                 li().with(text("Use apache stringutils for escaping"))
                         ),
                         // ---------------------------------------------------------------------------------------------
-                        h2().withId("j2html-on-maven").withText("j2html is on Maven! (Late May 2015)"),
-                        p().with(
-                                text("We've finished the herculean task of releasing on Maven Central. Thanks to Nicholas Smith for his great "),
-                                a("tutorial").withHref("http://nicholaspaulsmith.com/maven-sonatype-release/").withTarget("_blank"),
-                                text(".")
-                        ),
-                        // ---------------------------------------------------------------------------------------------
-                        h2().withId("hello-j2html").withText("Hello j2html! (Mid May 2015)"),
-                        p("After years in the making (okay, days), j2html is finally ready for launch! Check out the examples and be amazed.")
+                        h2("j2html 0.5.0 is on Maven! (Late May 2015)").withId("j2html-on-maven"),
+                        p("We've finished the herculean task of releasing on Maven Central.")
                 )
         );
     }

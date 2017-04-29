@@ -5,6 +5,7 @@ import j2html.tags.DomContent;
 import static j2html.TagCreator.a;
 import static j2html.TagCreator.body;
 import static j2html.TagCreator.br;
+import static j2html.TagCreator.div;
 import static j2html.TagCreator.document;
 import static j2html.TagCreator.fileAsString;
 import static j2html.TagCreator.footer;
@@ -55,6 +56,9 @@ public class MainView {
                                                         li().with(a("Download").withHref("/download.html")),
                                                         li().with(a("Examples").withHref("/examples.html")),
                                                         li().with(a("News").withHref("/news.html"))
+                                                ),
+                                                div().withId("github-stars").with(
+                                                        fileAsString("/html/githubStars.html")
                                                 )
                                         )
 
@@ -62,7 +66,6 @@ public class MainView {
                                 header().withClass("sub-header").withClass("banner").with(
                                         h1(heading).withClass("width-limit")
                                 ),
-                                //fileAsString("/html/socialButtons.html"),
                                 main().withClass("width-limit").with(
                                         tags //content from other template
                                 ),
