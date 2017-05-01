@@ -53,7 +53,7 @@ public class ExamplesView {
                     p("Given three random employees, all the above approaches would give the same HTML:"),
                     codeSnippet("markup", fileAsEscapedString("/codeExamples/forLoop.html")),
 
-                    h2(attrs("#table-example"), "Two dimensional table example"),
+                    h2(attrs("#2d-table-example"), "Two dimensional table example"),
                     javaComparison("2dTable"),
                     p("The code above is generating this table:"),
                     table(attrs("#table-example"),
