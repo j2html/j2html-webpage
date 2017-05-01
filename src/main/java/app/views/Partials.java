@@ -1,7 +1,6 @@
 package app.views;
 
-import j2html.tags.ContainerTag;
-import j2html.tags.Text;
+import j2html.tags.*;
 
 import static j2html.TagCreator.*;
 

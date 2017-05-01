@@ -1,9 +1,8 @@
 package app.views.pages;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-import app.views.MainView;
+import app.views.*;
 
 import static app.views.Partials.*;
 import static j2html.TagCreator.*;

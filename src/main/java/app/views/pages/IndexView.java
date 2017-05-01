@@ -1,6 +1,6 @@
 package app.views.pages;
 
-import app.views.MainView;
+import app.views.*;
 
 import static app.views.Partials.*;
 import static j2html.TagCreator.*;
