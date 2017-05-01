@@ -43,7 +43,7 @@ pre + p {
 
 p {
     font-family: Verdana, Arial, sans-serif;
-    line-height: 24px;
+    line-height: 1.5;
     text-align: justify;
 }
 
@@ -54,7 +54,7 @@ a {
 
 li {
     font-family: arial, sans-serif;
-    line-height: 20px;
+    line-height: 1.5;
     margin: 10px 0;
 }
 
@@ -179,6 +179,15 @@ footer {
     color: #777;
 }
 
+#table-example {
+    text-align: center;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-spacing: 5px 20px;
+    font-weight: 700;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
 @media screen and (max-width: 1024px) {
     #fork-me {
@@ -214,6 +223,55 @@ footer {
     .top-header nav ul li a {
         font-size: 14px;
     }
+}
+
+/* Prism */
+
+.code-compare ul {
+    background: #272822;
+    border-radius: 5px 5px 0 0;
+    list-style: none;
+    margin: 0;
+    border-bottom: 1px solid #464644;
+    padding: 0;
+    height: 28px;
+}
+
+.code-compare ul li {
+    color: #999;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+.code-compare ul li + li {
+    border-left: 1px solid #464644;
+}
+
+.code-compare pre {
+    display: none;
+    margin-top: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.code-compare.with .with-switch,
+.code-compare.nowith .nowith-switch {
+    color: #eee;
+}
+
+.code-compare.with .with-pre,
+.code-compare.nowith .nowith-pre {
+    display: block;
+}
+
+pre {
+    background: #272822;
+    padding: 15px !important;
+    border-radius: 5px;
 }
 
 pre::-webkit-scrollbar {

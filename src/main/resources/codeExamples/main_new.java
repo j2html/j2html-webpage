@@ -1,22 +1,23 @@
 public class MainView {
     public static String render(String pageTitle, Tag... tags) {
-        return document().render() +
-            html().with(
-                head().with(
+        return document(
+            html(
+                head(
                     title(pageTitle)
                 ),
-                body().with(
-                    header().with(
+                body(
+                    header(
                         ...
                     ),
-                    main().with(
+                    main(
                         tags //the view from the partials example
                     ),
-                    footer().with(
+                    footer(
                         ...
                     )
                 )
-            ).render();
+            )
+        );
     }
 }
 

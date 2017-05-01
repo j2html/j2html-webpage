@@ -1,6 +1,10 @@
 package app.controllers;
 
-import app.views.pages.*;
+import app.views.pages.DownloadView;
+import app.views.pages.ExamplesView;
+import app.views.pages.IndexView;
+import app.views.pages.NewsView;
+import app.views.pages.PageNotFoundView;
 import spark.Request;
 import spark.Response;
 

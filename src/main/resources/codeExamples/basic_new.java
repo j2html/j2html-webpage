@@ -1,10 +1,10 @@
-html().with(
-    head().with(
+html(
+    head(
         title("Title"),
         link().withRel("stylesheet").withHref("/css/main.css")
     ),
-    body().with(
-        main().withId("main").withClass("content").with(
+    body(
+        main(attrs("#main.content"),
             h1("Heading!")
         )
     )
