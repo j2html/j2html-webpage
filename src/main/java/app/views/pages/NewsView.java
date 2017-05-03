@@ -12,15 +12,16 @@ public class NewsView {
             "The latest news",
             section(attrs("#news"),
                     // ---------------------------------------------------------------------------------------------
-                    h2("j2html 1.0.0 released! (May 2017)").withId("j2html-1.0.0-released"),
+                    h2("j2html 1.0.0 RC is here! (May 2017)").withId("j2html-1.0.0-released"),
                     mavenLink("1.0.0"),
                     p("Changes:"),
                     ul(
-                        li(join("v1 is officially done, we will be doing", a("semantic versioning").withHref("http://semver.org/").withTarget("_blank"), "from now on.")),
+                        li(join("v1 is almost done. We will be doing", a("semantic versioning").withHref("http://semver.org/").withTarget("_blank"), "from now on.")),
                         li(join("All tag methods (", code("div()"), ",", code("p()"), "etc ) can now accept an arbitrary number of", code("DomContent"), "as arguments, eliminating the need for", code("with()"), "in most cases.")),
-                        li(join("Added a shorthand-attribute overloads to all TagCreator methods:", br(), code("div(attrs(\"#id.class\")"), "becomes", code("<div id=\"id\" class=\"class\">"))),
+                        li(join("Added a shorthand-attribute overloads to all TagCreator methods:", br(), code("div(attrs(\"#id.class\")"), "becomes", code("<div id=\"id\" class=\"class\"></div>"))),
                         li(join("Added a", code("join()"), "method to more easily join sentences with inline HTML, like:", br(), code("join(\"Added a\", code(\"join()\"), \"method to more ea..."))),
-                        li(join("Added a", code("document()"), "method that takes a", code("html()"), " tag and renders a HTML declaration followed by the html content"))
+                        li(join("Added a", code("document()"), "method that takes a", code("html()"), " tag and renders a HTML declaration followed by the html content")),
+                        li("Added support for Java 7 and Java 6. Some functionality (each/filter) will not work on these versions, but everything else should.")
                     ),
                     // ---------------------------------------------------------------------------------------------
                     h2("j2html 0.99 released! (Apr 2017)").withId("j2html-0.99-released"),
