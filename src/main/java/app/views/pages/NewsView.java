@@ -13,7 +13,7 @@ public class NewsView {
             section(attrs("#news"),
                     // ---------------------------------------------------------------------------------------------
                     h2("j2html 1.0.0 RC is here! (May 2017)").withId("j2html-1.0.0-released"),
-                    mavenLink("1.0.0"),
+                    mavenLink("1.0.0-RC"),
                     p("Changes:"),
                     ul(
                         li(join("v1 is almost done. We will be doing", a("semantic versioning").withHref("http://semver.org/").withTarget("_blank"), "from now on.")),
