@@ -47,7 +47,7 @@ public class MainView {
                         "This page was created using",
                         a("j2html").withHref("https://github.com/tipsy/j2html").withTarget("_blank"),
                         "and",
-                        a("Spark").withHref("http://sparkjava.com/").withTarget("_blank"),
+                        a("Javalin").withHref("https://javalin.io/").withTarget("_blank"),
                         ". Webpage source on",
                         a("Github").withHref("https://github.com/j2html/j2html-webpage").withTarget("_blank"),
                         ".",
