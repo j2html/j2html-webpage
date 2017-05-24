@@ -1,27 +1,28 @@
 package app.controllers;
 
 import app.views.pages.*;
-import spark.*;
+import javalin.Request;
+import javalin.Response;
 
 public class PageController {
 
-    public static String serveIndex(Request req, Response res) {
-        return IndexView.render();
+    public static void serveIndex(Request req, Response res) {
+        res.html(IndexView.render());
     }
 
-    public static String serveDownload(Request req, Response res) {
-        return DownloadView.render();
+    public static void serveDownload(Request req, Response res) {
+        res.html(DownloadView.render());
     }
 
-    public static String serveExamples(Request req, Response res) {
-        return ExamplesView.render();
+    public static void serveExamples(Request req, Response res) {
+        res.html(ExamplesView.render());
     }
 
-    public static String serveNews(Request req, Response res) {
-        return NewsView.render();
+    public static void serveNews(Request req, Response res) {
+        res.html(NewsView.render());
     }
 
-    public static String serve404(Request req, Response res) {
-        return PageNotFoundView.render();
+    public static void serve404(Request req, Response res) {
+        res.html(PageNotFoundView.render());
     }
 }
