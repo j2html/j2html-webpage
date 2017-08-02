@@ -18,7 +18,7 @@ public class Main {
         app.get("/examples.html",  PageController::serveExamples);
         app.get("/news.html",      PageController::serveNews);
         app.get("/404.html",       PageController::serve404);
-        
+
     }
 
 }

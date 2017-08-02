@@ -6,6 +6,6 @@ body().with(
                 img().withSrc(employee.getImgPath()),
                 p(employee.getTitle())
             )
-        ).collect(Collectors.toList())
+        ).toArray(ContainerTag[]::new)
     )
 )
