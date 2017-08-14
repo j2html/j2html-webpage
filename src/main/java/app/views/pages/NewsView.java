@@ -12,6 +12,13 @@ public class NewsView {
             "The latest news",
             section(attrs("#news"),
                     // ---------------------------------------------------------------------------------------------
+                    h2("j2html 1.1.0 is out! (Aug 2017)").withId("j2html-1.1.0-released"),
+                    mavenLink("1.1.0"),
+                    p("Changes:"),
+                    ul(
+                        li(join("Added a option to customize TextEscaper via ", code("Config.textEscaper = text -> {}")))
+                    ),
+                    // ---------------------------------------------------------------------------------------------
                     h2("j2html 1.0.0 is here! (May 2017)").withId("j2html-1.0.0-released"),
                     mavenLink("1.0.0"),
                     p("Changes:"),
