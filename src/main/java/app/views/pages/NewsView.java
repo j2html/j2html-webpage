@@ -12,11 +12,23 @@ public class NewsView {
             "The latest news",
             section(attrs("#news"),
                     // ---------------------------------------------------------------------------------------------
+                    h2("j2html 1.2.0 already? (Sep 2017)").withId("j2html-1.2.0-released"),
+                    mavenLink("1.2.0"),
+                    p("Changes:"),
+                    ul(
+                        li(join("Added option to render formatted HTML, ex", code("body(...).renderFormatted()"))),
+                        li(join("Added option to configure HTML-formatting-indent via", code("Config.indenter = (int, string) -> {...}"))),
+                        li(join("Added option to configure CSS-minification via", code("Config.cssMinifier = string -> {...}"))),
+                        li(join("Added option to configure JS-minification via", code("Config.jsMinifier = string -> {...}"))),
+                        li(join("Added option to close empty tags via", code("Config.closeEmptyTags = true"))),
+                        li(join(code("attr()"), "can now take take any object, not just strings"))
+                    ),
+                    // ---------------------------------------------------------------------------------------------
                     h2("j2html 1.1.0 is out! (Aug 2017)").withId("j2html-1.1.0-released"),
                     mavenLink("1.1.0"),
                     p("Changes:"),
                     ul(
-                        li(join("Added a option to customize TextEscaper via ", code("Config.textEscaper = text -> {}")))
+                        li(join("Added a option to customize TextEscaper via", code("Config.textEscaper = text -> {}")))
                     ),
                     // ---------------------------------------------------------------------------------------------
                     h2("j2html 1.0.0 is here! (May 2017)").withId("j2html-1.0.0-released"),
