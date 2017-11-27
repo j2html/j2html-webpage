@@ -21,7 +21,7 @@
         <dependency>
             <groupId>com.j2html</groupId>
             <artifactId>j2html</artifactId>
-            <version>1.2.0</version>
+            <version>1.2.1</version>
         </dependency>
     </dependencies>
 
@@ -49,6 +49,28 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <!-- This tells Maven to include all dependencies -->
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>app.Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>

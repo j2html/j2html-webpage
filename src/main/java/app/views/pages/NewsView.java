@@ -12,6 +12,15 @@ public class NewsView {
             "The latest news",
             section(attrs("#news"),
                     // ---------------------------------------------------------------------------------------------
+                    h2("j2html 1.2.1 fixes some bugs (Nov 2017)").withId("j2html-1.2.1-released"),
+                    mavenLink("1.2.1"),
+                    p("Changes:"),
+                    ul(
+                        li(join("Fix", em("\"bad closing tag (<!DOCTYPE html/>) when closeEmptyTags is true\""), "bug")),
+                        li(join("Fix", em("\"can't load static resources from jar\""), "bug")),
+                        li(join("Fix", em("\"CSSMin stripping last character of CSS rule if rule doesn't end in semi-colon\""), "bug"))
+                    ),
+                    // ---------------------------------------------------------------------------------------------
                     h2("j2html 1.2.0 already? (Sep 2017)").withId("j2html-1.2.0-released"),
                     mavenLink("1.2.0"),
                     p("Changes:"),
