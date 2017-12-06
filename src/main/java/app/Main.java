@@ -13,11 +13,11 @@ public class Main {
             .port(8888)
             .start();
 
-        app.get("/",               PageController::serveIndex);
-        app.get("/download.html",  PageController::serveDownload);
-        app.get("/examples.html",  PageController::serveExamples);
-        app.get("/news.html",      PageController::serveNews);
-        app.get("/404.html",       PageController::serve404);
+        app.get("/", PageController::serveIndex);
+        app.get("/download.html", PageController::serveDownload);
+        app.get("/examples.html", PageController::serveExamples);
+        app.get("/news.html", PageController::serveNews);
+        app.get("/404.html", PageController::serve404);
 
     }
 
