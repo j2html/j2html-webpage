@@ -31,7 +31,15 @@ public class NewsView {
             section(attrs("#news"),
 
                     newsPost(
-                        "j2html 1.2.2 performance improvements (Dec 2017)", "1.2.2",
+                        "j2html 1.3.0 has a couple of features and fixes (May 2018)", "1.3.0",
+                        join("Added support for", code("Map"), "in", code("each()")),
+                        join("Added osgi metadata"),
+                        join("Added support for", code("Optional"), "in", code("iff()")),
+                        join("Fixed bugs in ", code("renderFormatted()"))
+                    ),
+
+                    newsPost(
+                        "j2html 1.2.2 has performance improvements (Dec 2017)", "1.2.2",
                         join("There have been some massive performance improvements. Big thanks to", a("kicktipp").withHref("https://github.com/kicktipp"), ".")
                     ),
 
