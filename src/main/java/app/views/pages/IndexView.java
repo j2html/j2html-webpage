@@ -34,12 +34,12 @@ public class IndexView {
                         )
                     ),
 
-                    h3("Please don't use j2html if:"),
+                    h3("Be careful about using j2html if:"),
                     ul(
                         li("You don't know Java and HTML well"),
                         li("You're creating a classic \"website\" that has a lot of static HTML (if it's all generated then it's fine)"),
-                        li("Your application has a lot of text and you don't use language files / a database (it could work, but string-concatenation would get very annoying)"),
-                        li("You use a CSS framework such as Bootstrap. We tried to use it for this site, it was a nightmare.")
+                        li("Your application has a lot of text and you don't use language files / a database (string-concatenation would get very annoying)"),
+                        li("You use a CSS framework which relies on a lot of copy pasting HTML from docs. You will have to translate these snippets to HTML")
                     ),
 
                     h2("Why did you make this library?"),

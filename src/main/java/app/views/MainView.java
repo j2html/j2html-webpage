@@ -43,6 +43,13 @@ public class MainView {
                     main(attrs(".width-limit"),
                          tags //content from other template
                     ),
+                    div(attrs("#javalin-suggestion"), join(
+                        span("✖").withClass("close"),
+                        "Want a simple and modern web framework?",
+                        br(),
+                        "Try our other project:",
+                        a("https://javalin.io").withHref("https://javalin.io?from=j2html")
+                    )),
                     footer(join(
                         "This page was created using",
                         a("j2html").withHref("https://github.com/tipsy/j2html").withTarget("_blank"),
@@ -55,7 +62,8 @@ public class MainView {
                         p(attrs(".lols"), "A static page generator or a template engine would be better suited than a HTML builder for creating this page, but we had to do it.")
                     )),
                     scriptWithInlineFile("/public/js/prism.js"),
-                    scriptWithInlineFile_min("/public/js/codeCompare.js")
+                    scriptWithInlineFile_min("/public/js/codeCompare.js"),
+                    scriptWithInlineFile_min("/public/js/javalinSuggestion.js")
                 )
             )
         );

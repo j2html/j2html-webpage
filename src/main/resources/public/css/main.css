@@ -293,3 +293,29 @@ pre::-webkit-scrollbar-button {
     width: 8px;
     height: 8px;
 }
+
+#javalin-suggestion {
+    line-height: 2;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 40px 20px 20px;
+    background: #fff;
+    box-shadow: 4px 4px 0 0px rgba(0,0,0,.2);
+    z-index: 1;
+    display: none;
+    font-size: 17px;
+    max-width: calc(100% - 60px);
+    border: 2px solid #009ebe;
+}
+
+#javalin-suggestion .close {
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    right: 15px;
+}
+
+#javalin-suggestion a {
+    font-weight: 700;
+}
