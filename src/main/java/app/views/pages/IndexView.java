@@ -39,7 +39,6 @@ public class IndexView {
                         li("You don't know Java and HTML well"),
                         li("You're creating a classic \"website\" that has a lot of static HTML (if it's all generated then it's fine)"),
                         li("Your application has a lot of text and you don't use language files / a database (string-concatenation would get very annoying)"),
-                        li("You use a CSS framework which relies on a lot of copy pasting HTML from docs. You will have to translate these snippets to HTML")
                     ),
 
                     h2("Why did you make this library?"),
