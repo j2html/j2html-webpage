@@ -31,6 +31,12 @@ public class NewsView {
             section(attrs("#news"),
 
                     newsPost(
+                        "j2html 1.4.0 adds a couple of convenient methods (Jan 2019)", "1.4.0",
+                        join("Added", code("TagCreator::each(Map, BiFunction)")),
+                        join("Added", code("Stream<DomContent>"), "variants of", code("each"), "and", code("with"))
+                    ),
+
+                    newsPost(
                         "j2html 1.3.0 has a couple of features and fixes (May 2018)", "1.3.0",
                         join("Added support for", code("Map"), "in", code("each()")),
                         join("Added osgi metadata"),
