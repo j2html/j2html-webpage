@@ -3,15 +3,13 @@ package app;
 import app.controllers.PageController;
 import io.javalin.Javalin;
 
-
 public class Main {
 
     public static void main(String[] args) {
 
-        Javalin app = Javalin.create()
-            .enableStaticFiles("/public")
-            .port(8888)
-            .start();
+        Javalin app = Javalin.create(config ->
+            config.addStaticFiles("/public")
+        ).start(8888);
 
         app.get("/", PageController::serveIndex);
         app.get("/download.html", PageController::serveDownload);
