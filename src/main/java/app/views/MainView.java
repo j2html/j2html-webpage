@@ -14,8 +14,8 @@ public class MainView {
                     meta().withName("viewport").withContent("width=device-width, initial-scale=1"),
                     meta().withName("description").withContent("j2html - Fast and fluent Java HTML builder. Build type-safe HTML 5 with Java 8 expression!"),
                     title(title + " - Java HTML builder"),
-                    link().withRel("icon").withHref("/img/favicon.png"),
-                    link().withRel("stylesheet").withHref("https://fonts.googleapis.com/css?family=Lato:100,300,400,700"),
+                    link().withRel("icon").withHref("/img/favicon.svg"),
+                    link().withRel("stylesheet").withHref("https://fonts.googleapis.com/css2?family=Lato&family=Patua+One&display=swap"),
                     styleWithInlineFile_min("/public/css/prism.css"),
                     styleWithInlineFile_min("/public/css/main.css")
                 ),
@@ -25,15 +25,14 @@ public class MainView {
                     header(attrs(".top-header"),
                            nav(attrs(".width-limit"),
                                a().withId("logo").withHref("/").with(
-                                   span(img().withSrc("/img/logo_teal.png").withAlt("j2html logo"), text("j2html"))
+                                   span(img().withSrc("/img/logo.svg").withAlt("j2html logo"))
                                ),
                                ul(
                                    li(a("Home").withHref("/")),
                                    li(a("Download").withHref("/download.html")),
                                    li(a("Examples").withHref("/examples.html")),
                                    li(a("News").withHref("/news.html"))
-                               ),
-                               div(attrs("#github-stars"), fileAsString("/html/githubStars.html"))
+                               )
                            )
 
                     ),

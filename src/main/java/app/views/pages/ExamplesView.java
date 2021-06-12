@@ -31,8 +31,6 @@ public class ExamplesView {
                         text(".")
                     ),
 
-                    fileAsString("/html/socialButtons.html"),
-
                     h2(attrs("#core-concepts"), "Core concepts"),
                     codeSnippet("java", fileAsEscapedString("/codeExamples/coreConcepts.java")),
 

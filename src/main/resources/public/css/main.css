@@ -12,7 +12,7 @@ html {
     min-height: 100%;
     font-family: arial, sans-serif;
     overflow-y: scroll;
-    background: #f5f5f5;
+    background: #fafafa;
 }
 
 body {
@@ -21,7 +21,8 @@ body {
 }
 
 h1, h2, h3, nav a {
-    font-family: "Lato", sans-serif;
+    font-family: 'Patua One', cursive;
+    font-weight: 400;
 }
 
 h1, h2, h3, h4 {
@@ -33,6 +34,10 @@ h1 + p, h2 + p, h3 + p {
     margin-top: 0;
 }
 
+h2, h3 {
+    color: rgba(0, 0, 0, 0.7);
+}
+
 pre + p {
     margin-top: 2em;
 }
@@ -41,27 +46,23 @@ pre + p {
     margin-top: 2em;
 }
 
-p {
-    font-family: Verdana, Arial, sans-serif;
-    line-height: 1.5;
-    text-align: justify;
-}
-
 a {
     text-decoration: none;
-    color: #009ebe;
-}
-
-li {
-    font-family: arial, sans-serif;
-    line-height: 1.4;
-    margin: 5px 0;
+    color: #1272BF;
 }
 
 p,
 li {
-    font-size: 16px;
+    font-family: "Lato", Arial, sans-serif;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 17px;
 }
+
+li {
+    margin: 5px 0;
+}
+
 
 dt {
     font-family: monospace;
@@ -77,12 +78,8 @@ dd {
 
 .width-limit {
     padding: 0 20px;
-    max-width: 840px;
+    max-width: 940px;
     margin: 0 auto;
-}
-
-.top-header nav {
-    position: relative;
 }
 
 #github-stars {
@@ -93,31 +90,31 @@ dd {
     height: 30px;
 }
 
-.top-header nav,
-.top-header ul {
-    height: 90px;
-}
-
 #logo {
     font-size: 20px;
     font-style: italic;
 }
 
 #logo img {
-    height: 60px;
-    margin: 15px 10px 15px 0;
-    vertical-align: middle;
+    display: block;
+    height: 50px;
 }
 
 .top-header {
     background: #fff;
 }
 
+.top-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
 .top-header ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    float: right;
 }
 
 .top-header li {
@@ -127,24 +124,24 @@ dd {
 
 .top-header ul li a {
     display: inline-block;
-    padding: 50px 5px 15px;
-    font-size: 18px;
+    padding: 8px;
+    font-size: 22px;
 }
 
 .banner {
-    background: #1eb1cc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+    background: #1272BF;
     margin: 0;
     color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     padding: 0 25px;
     height: 100px;
     line-height: 100px;
+    border-top: 3px solid #0d4d80;
+    border-bottom: 3px solid #0d4d80;
 }
 
 .banner h1 {
     font-size: 40px;
-    font-weight: 300;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 p code,
@@ -193,6 +190,7 @@ footer {
     #fork-me {
         display: none;
     }
+
     .top-header {
         border-bottom: 1px solid #ccc;
     }
@@ -202,12 +200,15 @@ footer {
     .banner {
         display: none;
     }
+
     .top-header nav ul li {
         margin: 0 5px;
     }
+
     .top-header nav ul li a {
         font-size: 16px;
     }
+
     #logo {
         font-size: 0;
     }
@@ -217,9 +218,11 @@ footer {
     #logo {
         display: none;
     }
+
     .top-header nav ul li {
         margin: 0 2px;
     }
+
     .top-header nav ul li a {
         font-size: 14px;
     }
@@ -278,17 +281,21 @@ pre::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
+
 pre::-webkit-scrollbar-thumb {
     background: #777;
     border-radius: 5px;
 }
+
 pre::-webkit-scrollbar-thumb:hover {
     background: #999;
 }
+
 pre::-webkit-scrollbar-track {
     background: #333;
     border-radius: 5px;
 }
+
 pre::-webkit-scrollbar-button {
     width: 8px;
     height: 8px;
@@ -301,7 +308,7 @@ pre::-webkit-scrollbar-button {
     right: 30px;
     padding: 20px 40px 20px 20px;
     background: #fff;
-    box-shadow: 4px 4px 0 0px rgba(0,0,0,.2);
+    box-shadow: 4px 4px 0 0px rgba(0, 0, 0, .2);
     z-index: 1;
     display: none;
     font-size: 17px;

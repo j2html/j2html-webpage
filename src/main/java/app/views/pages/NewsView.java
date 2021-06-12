@@ -27,7 +27,7 @@ public class NewsView {
     public static String render() {
         return MainView.render(
             "News about j2html",
-            "The latest news",
+            "News and releases",
             section(attrs("#news"),
 
                     newsPost(
